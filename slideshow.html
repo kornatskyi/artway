@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/slideshow.css">
+
+
 </head>
+
 <body>
 
     <div class="container">
-        <div class="container__arrow"> < </div>
-        <div class="container__imgs-container">
+        <div class="container__arrow arrows1">
+            <a href="#">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </a>
+        </div>
+        <div class="container__imgs">
             <img src="/img/slider/img1.jpg" alt="">
-            <img src="/img/slider/img2.jpg" alt="">
-            <img src="/img/slider/img3.jpg" alt="">
-            <img src="/img/slider/img4.jpg" alt="">
+            <img src="/img/slider/img2.jpeg" alt="">
+            <img src="/img/slider/img3.jpeg" alt="">
+            <img src="/img/slider/img4.jpeg" alt="">
             <img src="/img/slider/img5.jpg" alt="">
+            <img src="/img/bounded.png" alt="">
+            <img src="/img/insured-290x276.png" alt="">
         </div>
-        <div class="container__arrow">
-            > 
+        <div class="container__arrow arrows2">
+            <a href="#">
+                <div class="line1"></div>
+                <div class="line2"></div>
+            </a>
         </div>
-        <div class="container__dot"></div>
-    </div>s
-    
+        <div class="container__dots">
+            <div class="dot1">.</div>
+            <div class="dot2">.</div>
+            <div class="dot3">.</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+
+        let arr = $('.container__imgs > img');
+        let i = arr.length - 1;
+        $(arr).css("display", "none");
+        $(arr[arr.length - 1]).css("display", "");
+        $(".arrows1 > a").on('click', function () {
+
+            $(arr[i]).css("display", "none");
+            if (i >= arr.length - 1) { i = -1; }
+            i++;
+            $(arr[i]).css("display", "");
+
+        });
+
+        $(".arrows2 > a").on('click', function () {
+
+            $(arr[i]).css("display", "none");
+            if (i < 1) { i = arr.length - 1; }
+            i--;
+            $(arr[i]).css("display", "");
+
+        });
+
+    </script>
+
 </body>
+
 </html>
