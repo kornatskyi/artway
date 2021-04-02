@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAAA,UAAU,CAAC;EACP,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,YAAY;CAEhC;;AAGD,AAAA,UAAU,CAAC,GAAG,CAAC;EACX,KAAK,EAAC,KAAK;CAEd",
+    "sources": [
+        "../sass/photo-slider.scss"
+    ],
+    "names": [],
+    "file": "photo-slider.css"
+}

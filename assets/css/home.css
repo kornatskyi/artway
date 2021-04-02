@@ -1,0 +1,224 @@
+@font-face {
+  font-family: companyName;
+  src: url(/fonts/Bilbo/Bilbo-Regular.ttf);
+}
+
+body {
+  filter: drop-shadow(12px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.black-section {
+  background-color: #222222;
+}
+
+.main-section {
+  background-image: url(/img/main_background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-section__container {
+  margin: 0px 0px 0px 100px;
+  justify-content: center;
+  min-width: min-content;
+  width: 400px;
+}
+
+.main-section_company-name * {
+  font-size: 96px;
+  line-height: 100px;
+  color: #fb9614;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-style: normal;
+  font-weight: normal;
+  font-family: companyName;
+  text-align: center;
+}
+
+.main-section__decoration {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-section__decoration__line {
+  border: 1px solid white;
+  height: 0px;
+  width: 150px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-section__quote p {
+  text-align: center;
+  font-size: 32px;
+  width: max-content;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-section__get-estimate {
+  display: flex;
+  height: max-content;
+  margin: 30px 0 0 0;
+  justify-content: center;
+}
+
+.main-section__get-estimate form {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.main-section__get-estimate form > * {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  color: black;
+  margin: 10px 0;
+  border: none;
+  font-size: 19px;
+  box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.main-section__get-estimate form button {
+  color: white;
+  font-size: 23px;
+  background-color: #fb9614;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.main-section__get-estimate form button p {
+  align-self: center;
+}
+
+.section-title {
+  font-size: 35px;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.services__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.services__container img {
+  height: 200px;
+}
+
+.services__container p {
+  font-size: 26px;
+}
+
+.services__container a {
+  text-decoration: none;
+}
+
+.services__container a:hover p {
+  color: #fb9614;
+}
+
+.see-more-button {
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.see-more-button a {
+  border: 2px solid white;
+  align-self: flex-end;
+  display: flex;
+  padding: 5px 15px;
+  border-radius: 30px;
+  justify-content: space-around;
+  width: 140px;
+  text-decoration: none;
+}
+
+.see-more-button a * {
+  align-self: center;
+  text-align: center;
+}
+
+.see-more-button:hover * {
+  border-color: #fb9614;
+  color: #fb9614;
+  text-decoration: underline;
+}
+
+.see-more-button:hover img {
+  width: 27px;
+}
+
+.projects-quick-view {
+  height: 350px;
+  display: flex;
+}
+
+.garantys__container {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "garantys__container__license garantys__container__insurance garantys__container__donded" "garantys__container__license-description garantys__container__insurance-description garantys__container__banded-description";
+  justify-items: center;
+}
+
+.garantys__container * {
+  max-width: 300px;
+}
+
+.garantys__container p {
+  padding-left: 20px;
+}
+
+.garantys__container__license {
+  grid-area: garantys__container__license;
+}
+
+.garantys__container__insurance {
+  grid-area: garantys__container__insurance;
+}
+
+.garantys__container__bonded {
+  grid-area: garantys__container__donded;
+}
+
+.garantys__container__license-description {
+  grid-area: garantys__container__license-description;
+}
+
+.garantys__container__insurance-description {
+  grid-area: garantys__container__insurance-description;
+}
+
+.garantys__container__bonded-description {
+  grid-area: garantys__container__banded-description;
+}
+
+.reviews {
+  height: 300px;
+}
+
+.map__google-map {
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.map__google-map iframe {
+  height: 400px;
+  width: 800px;
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,120 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: min-content min-content min-content min-content;
+  gap: 0px 0px;
+  grid-template-areas: "exterior exterior" "interior interior" "commercial commercial" "multi multi";
+}
+
+.container > * {
+  margin: 5% 10%;
+}
+
+.container img {
+  max-width: 100%;
+}
+
+.exterior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "exterior__description exterior__img";
+  grid-area: exterior;
+}
+
+.exterior__img {
+  grid-area: exterior__img;
+}
+
+.exterior__description {
+  grid-area: exterior__description;
+}
+
+.interior {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "interior__img interior__description";
+  grid-area: interior;
+}
+
+.interior__img {
+  grid-area: interior__img;
+}
+
+.interior__description {
+  grid-area: interior__description;
+}
+
+.commercial {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "commercial__description commercial__img";
+  grid-area: commercial;
+}
+
+.commercial__img {
+  grid-area: commercial__img;
+}
+
+.commercial__description {
+  grid-area: commercial__description;
+}
+
+.multi {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "." ".";
+  grid-area: multi;
+}
+
+.services-title {
+  font-size: 36px;
+  margin: 20px;
+}
+
+.description {
+  padding: 0px 50px;
+}
+
+.description li {
+  margin: 5px 0px;
+  font-size: 18px;
+}
+
+.multi__description > * {
+  max-width: max-content;
+  align-self: center;
+  text-align: center;
+}
+
+.multi__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.multi__img-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.multi__img-container > * {
+  width: 48%;
+}
+
+@media screen and (max-width: 700px) {
+  .container > * {
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*# sourceMappingURL=services.css.map */
