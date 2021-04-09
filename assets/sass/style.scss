@@ -1,85 +1,103 @@
+// Custom.scss
+// Your variable overrides
+
+// Option A: Include all of Bootstrap
+
 @import "_variables.scss";
 
-@font-face {
-  font-family: mainFont;
-  src: url(../fonts/Caudex/Caudex-Regular.ttf);
+
+
+
+
+
+// @import "global.scss";
+
+.bilbo-font {
+  font-family: $title-font;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: mainFont;
-  font-family: Caudex;
-  font-style: normal;
-  color:$dark;
-}
-
-body {
-  background-color: #565659;
-  display: block;
-}
-
-h1 {
-  /* H1 Headline */
-  font-weight: bold;
-  font-size: 96px;
-  line-height: 125%;
-  /* identical to box height, or 120px */
-
-  letter-spacing: -0.015em;
-
-  /* dark */
-
-  color: #222222;
-}
-
-h2 {
-  /* H2 Headline */
-
-  font-weight: bold;
-  font-size: 60px;
-}
-
-h3 {
-  /* H3 Headline */
-
-  font-weight: bold;
-  font-size: 25px;
-}
-
-p {
-
-  /* Body 1 */
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 150%;
-  /* identical to box height, or 24px */
-
-  letter-spacing: 0.0168em;
-  font-feature-settings: "tnum" on, "lnum" on;
-}
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "global.scss";
+@import "home.scss";
 
 
-button { 
-  /* Button */
 
-font-weight: bold;
-font-size: 16px;
-line-height: 150%;
-/* identical to box height, or 24px */
+// * {
+//   margin: 0;
+//   padding: 0;
+//   font-family: mainFont;
+//   font-family: Caudex;
+//   font-style: normal;
+//   color:$dark;
+// }
 
-letter-spacing: 0.05em;
-text-transform: capitalize;
+// body {
+
+//   display: block;
+// }
+
+// h1 {
+//   /* H1 Headline */
+//   font-weight: bold;
+//   font-size: 96px;
+//   line-height: 125%;
+//   /* identical to box height, or 120px */
+
+//   letter-spacing: -0.015em;
+
+//   /* dark */
+
+//   color: #222222;
+// }
+
+// h2 {
+//   /* H2 Headline */
+
+//   font-weight: bold;
+//   font-size: 60px;
+// }
+
+// h3 {
+//   /* H3 Headline */
+
+//   font-weight: bold;
+//   font-size: 25px;
+// }
+
+// p {
+
+//   /* Body 1 */
+//   font-weight: normal;
+//   font-size: 16px;
+//   line-height: 150%;
+//   /* identical to box height, or 24px */
+
+//   letter-spacing: 0.0168em;
+//   font-feature-settings: "tnum" on, "lnum" on;
+// }
 
 
-}
+// button { 
+//   /* Button */
 
-a {
+// font-weight: bold;
+// font-size: 16px;
+// line-height: 150%;
+// /* identical to box height, or 24px */
 
-font-size: 10px;
-line-height: 130%;
-/* or 13px */
+// letter-spacing: 0.05em;
+// text-transform: capitalize;
 
-letter-spacing: 0.03em;
-text-decoration-line: underline;
-}
+
+// }
+
+// a {
+
+// font-size: 14px;
+// line-height: 130%;
+// /* or 13px */
+
+// letter-spacing: 0.03em;
+// text-decoration-line: underline;
+// }
+

@@ -1,10 +1,65 @@
-// Collors
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/Caudex/Caudex-Regular.ttf);
+  }
 
-$orange: #FB9614;
-$dark: #222222;
-$light:#FFFBF6;
-$white: white;
-$gray: #818A91;
-$black: black;
+  @font-face {
+    font-family: Bilbo;
+    src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
+  }
+  // Collors
+
+$primary  : #222222;
+$secondary: #FB9614;
+$success  : green;
+$info     : rgb(65, 227, 255);
+$warning  : rgb(60, 0, 0);
+$danger   : red;
+$light    : #FFFBF6;
+$dark     : #222222;
 
 
+$theme-colors: ("primary": $primary,
+    "secondary": $secondary,
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger,
+    "light": $light,
+    "dark": $dark);
+
+$variable-prefix: 1rm;
+    // stylelint-disable value-keyword-case
+$font-family-sans-serif:      mainFont;
+$font-family-monospace:       mainFont;
+// Font for Title on the home page
+$title-font: Bilbo;
+// stylelint-enable value-keyword-case
+$font-family-base:            var(--#{$variable-prefix}font-sans-serif);
+$font-family-code:            var(--#{$variable-prefix}font-monospace);
+
+// $font-size-root effects the value of `rem`, which is used for as well font sizes, paddings and margins
+// $font-size-base effects the font size of the body text
+$font-size-root:              null;
+$font-size-base:              1rem; // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base * .875;
+$font-size-lg:                $font-size-base * 1.25;
+
+$font-weight-lighter:         lighter;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
+$font-weight-bolder:          bolder;
+
+$font-weight-base:            $font-weight-normal;
+
+$line-height-base:            1.5;
+$line-height-sm:              1.25;
+$line-height-lg:              2;
+
+$h1-font-size:                $font-size-base * 5.5;
+$h2-font-size:                $font-size-base * 2;
+$h3-font-size:                $font-size-base * 1.75;
+$h4-font-size:                $font-size-base * 1.5;
+$h5-font-size:                $font-size-base * 1.25;
+$h6-font-size:                $font-size-base;

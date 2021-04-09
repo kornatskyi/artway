@@ -2,232 +2,152 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Way Construction</title>
-
-
-
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/home.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <script defer src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+  <script defer src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="/assets/css/home.css"> -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- <link rel="stylesheet" href="/assets/css/global.css"> -->
 </head>
 
 <body>
-    <header>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark">
-            <a class="navbar-brand" href="#">
-                <div class="header__logo">
-                    <img src="/assets/img/logo-154x149.png" alt="Logo">
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href=""><img src="assets/img/logo-154x149.png" alt="ArtWay painting company"></a>
+        <button class="navbar-toggler navbar-custom" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom active text-secondary fs-3" aria-current="page"
+                href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom text-light fs-3" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom text-light fs-3" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom text-light fs-3" href="blog.html">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-custom text-light fs-3" href="contactus.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="container">
+    <!-- <div class="row">
+      <div class="title">
+        <span class="fs-1 text-secondary bilbo-font">
+          ARTWAY Construction
+        </span>
+        <i class="title_decoration">
+
+        </i>
+        <span class="fs-3">
+          We are proud to be your painters
+        </span>
+      </div>
+
+    </div>
+    <div class="row row justify-content-center">
+      <div class="col-10">
+        <form>
+          <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingName" placeholder="Name">
+            <label for="floatingName">Name</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="tel" class="form-control" id="floatingPhone" placeholder="Phone number"
+              pattern="[0-9]{1}">
+            <label for="floatingPhone">Phone number</label>
+          </div>
+          <button class="btn col-12 btn-block btn-secondary text-light" type="submit">GET ESTIMATE</button>
+        </form>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col">
+        <h2>Services</h2>
+        <ul class="nav nav-pills rounded-3 nav-fill mb-3 bg-dark nav-pills-custom" id="pills-tab" role="tablist">
+
+          <li class="nav-item d-flex align-items-center " role="presentation">
+            <button class="nav-link active" id="pills-interior-tab" data-bs-toggle="pill" data-bs-target="#pills-interior"
+              type="button" role="tab" aria-controls="pills-interior" aria-selected="true">
+              <div class="d-flex flex-column align-items-center justify-content-center">
+                <i class="interior-icon"></i>
+                <span>Interior</span>
+              </div>
             </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Project</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="header__menu__link">
-                            <div class="header__menu__contact-link">Contact</div>
-                        </a>
-                    </li>
-                </ul>
+          </li>
+          <li class="nav-item d-flex align-items-center " role="presentation">
+            <button class="nav-link" id="pills-exterior-tab" data-bs-toggle="pill" data-bs-target="#pills-exterior"
+              type="button" role="tab" aria-controls="pills-exterior" aria-selected="true">
+              <div class="d-flex flex-column align-items-center justify-content-center">
+                <i class="exterior-icon"></i>
+                <span>Exterior</span>
+              </div>
+            </button>
+          </li>
+          <li class="nav-item d-flex align-items-center " role="presentation">
+            <button class="nav-link" id="pills-commercial-tab" data-bs-toggle="pill" data-bs-target="#pills-commercial"
+            type="button" role="tab" aria-controls="pills-commercial" aria-selected="true">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <i class="commercial-icon"></i>
+              <span>Commercial</span>
             </div>
-        </nav>
-
-
-
-        <!-- <div class="header__menu">
-            <a href="#" class="header__menu__link">Home</a>
-            <a href="#" class="header__menu__link">Services</a>
-            <a href="#" class="header__menu__link">Project</a>
-            <a href="#" class="header__menu__link">About</a>
-            <a href="#" class="header__menu__link">
-                <div class="header__menu__contact-link">Contact</div>
-            </a>
-        </div> -->
-    </header>
-    <div class="sction main-section">
-        <div class="main-section__container">
-            <div class="main-section_company-name">
-                <p><span style="text-transform: uppercase;">ArtWay</span> <br> Construction</p>
+          </button>
+          </li>
+          <li class="nav-item d-flex align-items-center " role="presentation">
+            <button class="nav-link" id="pills-multi-family-tab" data-bs-toggle="pill" data-bs-target="#pills-multi-family"
+            type="button" role="tab" aria-controls="pills-multi-family" aria-selected="true">
+            <div class="d-flex flex-column align-items-center justify-content-center">
+              <i class="multi-family-icon"></i>
+              <span>Multi-Family</span>
             </div>
-            <div class="main-section__decoration">
-                <div class="main-section__decoration__line"></div>
-                <img src="/assets/img/icons/brush.png" alt="">
-                <div class="main-section__decoration__line"></div>
-            </div>
-            <div class="main-section__quote">
-                <p>We are proud to be your painters</p>
-            </div>
-            <div class="main-section__get-estimate">
-                <form action="#">
-                    <input type="text" name="name" placeholder="  Name">
-                    <input type="text" name="Email" placeholder="  Email">
-                    <input type="text" name="phone" placeholder="  Phone number">
-                    <button>
-                        <p> Get Free Estimate</p>
-                    </button>
-                </form>
-            </div>
+          </button>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-interior" role="tabpanel" aria-labelledby="pills-interior-tab">Lorem
+            ipsum, dolor sit amet consectetur adipisicing elit. Soluta, vitae ab recusandae reprehenderit, cumque quae
+            facilis eaque nisi reiciendis commodi quaerat est veniam quisquam excepturi fugit labore tenetur nam id.
+          </div>
+          <div class="tab-pane fade" id="pills-exterior" role="tabpanel" aria-labelledby="pills-exterior-tab">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Maiores dolorum deserunt, ea maxime sit rerum ipsam eaque sed
+            soluta repellendus numquam blanditiis distinctio eligendi non molestias minima quisquam veritatis earum.
+          </div>
+          <div class="tab-pane fade" id="pills-commercial" role="tabpanel" aria-labelledby="pills-commercial-tab">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Itaque pariatur fuga cum eveniet suscipit ducimus, quasi hic.
+            Dolore explicabo esse eaque, corporis recusandae fugit perspiciatis molestias impedit. Laboriosam, quia
+            saepe.</div>
+          <div class="tab-pane fade" id="pills-multi-family" role="tabpanel" aria-labelledby="pills-multi-family-tab">Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Itaque pariatur fuga cum eveniet suscipit ducimus, quasi hic.
+            Dolore explicabo esse eaque, corporis recusandae fugit perspiciatis molestias impedit. Laboriosam, quia
+            saepe.</div>
         </div>
+
+      </div>
     </div>
-    <div class="section grey-section services">
-        <div class="section-title services__title">Works We Do</div>
-        <div class="services__container">
-            <div class="services__container__interior">
-                <a href="#">
-                    <img src="/assets/img/icons/interior-240x240.png" alt="">
-                    <p>Interior Painting</p>
-                </a>
-            </div>
 
-            <div class="services__container__exterior">
-                <a href="#">
-                    <img src="/assets/img/icons/exterior.png" alt="">
-                    <p>Exterior Painting</p>
-                </a>
-            </div>
-
-            <div class="services__container__commercial">
-                <a href="#">
-                    <img src="/assets/img/icons/commercial.png" alt="">
-                    <p>Commercial Painting</p>
-                </a>
-            </div>
-
-            <div class="services__container__multi-family">
-                <a href="#">
-                    <img src="/assets/img/icons/multi-family.png" alt="">
-                    <p>Multi-family Painting</p>
-                </a>
-            </div>
-        </div>
-        <div class="see-more-button projects-quick-view__button">
-            <a href="#">
-                <p>More about <br> services</p>
-                <img src="/assets/img/icons/triangle.png" alt="">
-            </a>
-        </div>
-    </div>
-    <div class="section black-section projects-quick-view">
-        <div class="section-title projects-quick-view__title">
-            Some of our projects
-        </div>
-        <div class="projects-quick-view__slider">
-
-        </div>
-        <div class="see-more-button projects-quick-view__button">
-            <a href="#">
-                <p> See our <br> galery</p>
-                <img src="/assets/img/icons/triangle.png" alt="">
-            </a>
-        </div>
-    </div>
-    <div class="section grey-section garantys">
-        <div class="garantys__title section-title">
-            We are licensed and inssured
-        </div>
-        <div class="garantys__container">
-            <div class="garantys__container__license">
-                <img src="/assets/img/licensed-trenspa.png" alt="">
-            </div>
-
-            <div class="garantys__container__license-description">
-                <p class="garantys__container__license-description__title">VERIFIED LICENSE </p><br>
-                <p> License # ARTWAC830D2 <br>
-                    Status <span style="color: #00C62B">Active</span><br>
-                    State Washington<br>
-                    <span style="color: #587DFF">Verify</span> this license's status for Artway Construction at the
-                    Washington State Department of Labor
-                    & Industries.
-                </p>
-            </div>
-
-            <div class="garantys__container__insurence">
-                <img src="/assets/img/insured-290x276.png" alt="">
-            </div>
-
-            <div class="garantys__container__insurence-description">
-                <p class="garantys__container__insurence-description__title">INSURED</p><br>
-                <p>Insurer Ohio Security Ins Co
-                    Insured up to $1,000,000</p>
-            </div>
-
-            <div class="garantys__container__bonded">
-                <img src="/assets/img/bounded-300x300.png.png" alt="">
-            </div>
-            <div class="garantys__container__bonded-description">
-                <p class="garantys__container__bonded-description__title">BONDED</p>
-                <p>Bonded Agent Philadelphia Indemnity Ins Co
-                    Bond Value $6,000</p>
-            </div>
-        </div>
-    </div>
-    <div class="section black-section reviews">
-        <div class="reviews__title section-title">Reviews</div>
-        <div class="reviews_container">
-
-        </div>
-        <div class="see-more-button projects-quick-view__button">
-            <a href="#">
-                <p> Google maps <br> reviews</p>
-                <img src="/assets/img/icons/triangle.png" alt="">
-            </a>
-        </div>
-
-
-    </div>
-    <div class="section map">
-        <div class="map-title section-title">Where we are on the map</div>
-        <div class="map__google-map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102407.23621093095!2d-122.24373704772101!3d47.58616012179763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549057d6e7c1fd73%3A0xa77d41ac19c3ba4!2sARTWAY%20construction!5e0!3m2!1sen!2sus!4v1612482849320!5m2!1sen!2sus"
-                width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-
-        </div>
-    </div>
-    // Add shops we work with (Sherwin Williams, etc.)
-    <footer>
-        <div class="footer__menu">
-            <a href="#" class="footer__menu__link">Home</a>
-            <a href="#" class="footer__menu__link">Services</a>
-            <a href="#" class="footer__menu__link">Project</a>
-            <a href="#" class="footer__menu__link">About</a>
-        </div>
-        <div class="footer_contact-info">
-            Contact information <br>
-            Email: <a href="#">artwayconstruction@gmail.com</a> <br>
-            Phone: <a href="#">206 (825) - 00 00 </a><br>
-            Located in: <span style="color: #FB9614">Overlook At Lakemont Apartments</span><br>
-            Address: <span style="color: #FB9614">5411 Village Park Dr SE, Bellevue, WA 98006</span>
-        </div>
-        <div class="footer__media-links">
-            <a href="#"><img src="img/icons/yelp_23x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/facebook-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/telegram-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/linkedin-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/you-tube-30x30.png" alt="#"></a>
-        </div>
-
-    </footer>
-
+  </div>
 
 
 </body>

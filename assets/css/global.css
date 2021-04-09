@@ -1,0 +1,73 @@
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/Caudex/Caudex-Regular.ttf);
+}
+@font-face {
+  font-family: Bilbo;
+  src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
+}
+header .navbar-custom .navbar-toggler-icon {
+  background-image: url("../../assets/img/icons/menu-togler.svg");
+}
+header .navbar-brand {
+  margin: 10px;
+}
+header .nav-item {
+  text-align: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+}
+.title .title_decoration {
+  background-image: url("../../assets/img/icons/decoration.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  width: 100%;
+}
+
+.container .row {
+  margin: 40px 0px;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link span {
+  color: #FFFBF6;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link span {
+  color: #FB9614;
+}
+
+.nav-pills-custom {
+  height: 80px;
+}
+
+button.nav-link i {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+button.nav-link .interior-icon {
+  background-image: url("../../assets/img/icons/paint-roller-solid.svg");
+}
+button.nav-link .exterior-icon {
+  background-image: url("../../assets/img/icons/home-solid.svg");
+}
+button.nav-link .commercial-icon {
+  background-image: url("../../assets/img/icons/city-solid.svg");
+}
+button.nav-link .multi-family-icon {
+  background-image: url("../../assets/img/icons/building-solid.svg");
+}
+
+/*# sourceMappingURL=global.css.map */
