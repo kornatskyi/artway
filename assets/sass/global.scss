@@ -13,9 +13,8 @@ header {
         text-align: center;
 
     }
-
-
 }
+
 
 .title {
     display        : flex;
@@ -36,63 +35,3 @@ header {
     }
 }
 
-
-.container {
-
-    .row {
-        margin: 40px 0px;
-
-    }
-}
-
-
-//Tabs color
-.nav-pills .nav-link,
-.nav-pills .show>.nav-link span {
-    color: $light;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link span {
-    color: $secondary;
-}
-
-
-
-.nav-pills-custom {
-    height: 80px;
-}
-
-
-
-button.nav-link {
-    & i {
-        background-repeat: no-repeat;
-        background-size  : 100%;
-        width            : 30px;
-        height           : 30px;
-        display          : block;
-    }
-
-    .interior-icon {
-            
-    }
-
-    .exterior-icon {
-
-       
-    }
-
-
-    .commercial-icon {
-
-
-    }
-
-
-    .multi-family-icon {
-
-        
-    }
-
-}

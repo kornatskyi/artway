@@ -5182,7 +5182,7 @@ textarea.form-control-lg {
   background-color: rgba(255, 255, 255, 0.85);
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   border-radius: 0.25rem;
 }
 .toast:not(.showing):not(.show) {
@@ -6369,7 +6369,7 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2) !important;
 }
 
 .shadow-sm {
@@ -10876,14 +10876,47 @@ header .nav-item {
 
 .nav-pills-custom {
   height: 80px;
+  z-index: 10;
 }
 
-button.nav-link i {
+.nav.nav-pills button.nav-link {
+  padding: 0%;
+}
+.nav.nav-pills button.nav-link i {
   background-repeat: no-repeat;
   background-size: 100%;
   width: 30px;
   height: 30px;
   display: block;
+}
+.tab-content {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tab-content a {
+  width: 100%;
+}
+.tab-content a:hover {
+  color: #FB9614;
+}
+
+.tab-content .tab-pane {
+  padding-top: 45px;
+}
+.tab-content .tab-pane .carousel {
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tab-content .tab-pane .description {
+  padding-left: 20px;
+}
+
+.tab-content {
+  position: relative;
+  bottom: 50px;
+}
+
+#pills-tab {
+  width: 95%;
 }
 
 /*# sourceMappingURL=style.css.map */

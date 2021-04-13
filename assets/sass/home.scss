@@ -1,0 +1,97 @@
+
+.container {
+
+    .row {
+        margin: 40px 0px;
+
+    }
+}
+
+
+//Tabs color
+//Tabs
+.nav-pills .nav-link,
+.nav-pills .show>.nav-link span {
+    color: $light;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link span {
+    color: $secondary;
+}
+
+.nav-pills-custom {
+    height: 80px;
+    z-index: 10;
+}
+
+.nav.nav-pills button.nav-link {
+    padding: 0%;
+    & i {
+        background-repeat: no-repeat;
+        background-size  : 100%;
+        width            : 30px;
+        height           : 30px;
+        display          : block;
+
+    }
+
+    .interior-icon {
+            
+    }
+
+    .exterior-icon {
+
+       
+    }
+
+
+    .commercial-icon {
+
+
+    }
+
+
+    .multi-family-icon {
+
+        
+    }
+
+}
+
+.tab-content {
+    box-shadow: $box-shadow;
+    a { 
+        width: 100%;
+    }
+    a:hover {
+        color: $secondary;
+    }
+}
+
+.tab-content .tab-pane {
+    
+    padding-top: 45px;
+    .carousel {
+        width: 90%;
+        box-shadow: $box-shadow;
+    }
+    .description {
+        padding-left: 20px;
+    }
+
+   
+}
+
+.tab-content {
+    position: relative;
+    bottom: 50px;
+    
+
+}
+
+#pills-tab {
+    width: 95%;
+
+}
+
