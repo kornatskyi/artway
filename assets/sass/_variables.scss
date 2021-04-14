@@ -17,6 +17,7 @@ $warning  : rgb(60, 0, 0);
 $danger   : red;
 $light    : #FFFBF6;
 $dark     : #222222;
+$white: white;
 
 
 $theme-colors: ("primary": $primary,
@@ -26,7 +27,8 @@ $theme-colors: ("primary": $primary,
     "warning": $warning,
     "danger": $danger,
     "light": $light,
-    "dark": $dark);
+    "dark": $dark,
+    "white": $white);
 
 $variable-prefix: 1rm;
     // stylelint-disable value-keyword-case

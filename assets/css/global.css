@@ -57,17 +57,5 @@ button.nav-link i {
   height: 30px;
   display: block;
 }
-button.nav-link .interior-icon {
-  background-image: url("../../assets/img/icons/paint-roller-solid.svg");
-}
-button.nav-link .exterior-icon {
-  background-image: url("../../assets/img/icons/home-solid.svg");
-}
-button.nav-link .commercial-icon {
-  background-image: url("../../assets/img/icons/city-solid.svg");
-}
-button.nav-link .multi-family-icon {
-  background-image: url("../../assets/img/icons/building-solid.svg");
-}
 
 /*# sourceMappingURL=global.css.map */

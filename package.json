@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kornatskyi/artway#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "@popperjs/core": "^2.9.2",
     "bootstrap": "^5.0.0-beta3"
   },
