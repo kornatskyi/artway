@@ -2,20 +2,16 @@
   font-family: mainFont;
   src: url(../fonts/Caudex/Caudex-Regular.ttf);
 }
-
 @font-face {
   font-family: Bilbo;
   src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
 }
-
 header .navbar-custom .navbar-toggler-icon {
   background-image: url("../../assets/img/icons/menu-togler.svg");
 }
-
 header .navbar-brand {
   margin: 10px;
 }
-
 header .nav-item {
   text-align: center;
 }
@@ -27,7 +23,6 @@ header .nav-item {
   align-items: center;
   padding: 0px;
 }
-
 .title .title_decoration {
   background-image: url("../../assets/img/icons/decoration.svg");
   background-repeat: no-repeat;
@@ -36,4 +31,5 @@ header .nav-item {
   height: 50px;
   width: 100%;
 }
+
 /*# sourceMappingURL=global.css.map */

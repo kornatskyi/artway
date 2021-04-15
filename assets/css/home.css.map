@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "../sass/home.scss"
-    ],
-    "names": [],
-    "file": "home.css"
-}
+{"version":3,"sourceRoot":"","sources":["../sass/_variables.scss","../sass/home.scss"],"names":[],"mappings":"AAAA;EACI;EACA;;AAGF;EACE;EACA;;ACJA;EACI;;;AAQR;AAAA;EAEI,ODGQ;;;ACAZ;AAAA;EAEI,ODPQ;;;ACUZ;EACI;EACA;;;AAGJ;EACI;;AACA;EACI;EACA;EACA;EACA;EACA;;AA2BR;EACI,YDQS;;ACPT;EACI;;AAEJ;EACI,ODvDI;;;AC2DZ;EAEI;;AACA;EACI;EACA,YDNK;;ACQT;EACI;;;AAMR;EACI;EACA;;;AAKJ;EACG;;;AAMH;EACI;;;AAGJ;EACI;;;AAGJ;EAEI","file":"home.css"}

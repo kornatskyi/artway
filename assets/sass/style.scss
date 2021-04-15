@@ -16,6 +16,97 @@
   font-family: $title-font;
 }
 
+body {
+  h1 {
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 96px;
+    line-height: 125%;
+  }
+
+  h2 {
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 40px;
+    line-height: 133%;
+  }
+
+  h3 {
+    font-style : normal;
+    font-weight: bold;
+    font-size  : 40px;
+    line-height: 133%;
+  }
+
+  h4 {
+    font-style : normal;
+    font-weight: $font-weight-bold;
+    font-size  : 35px;
+    line-height: 133%;
+  }
+
+  h5 {
+    font-style : normal;
+    font-weight: $font-weight-bold;
+    font-size  : 25px;
+    line-height: 133%;
+  }
+
+  h6 {}
+
+  p {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 36px;
+    line-height: 150%;
+  }
+
+  a {
+    font-style           : normal;
+    font-weight          : normal;
+    font-size            : 16px;
+    line-height          : 150%;
+    text-decoration-line : underline;
+    font-feature-settings: 'tnum'on, 'lnum'on;
+  }
+
+  span {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 150%;
+  }
+
+  li {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 150%;
+  }
+
+  ul {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 150%;
+  }
+  button {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 150%;
+  }
+  input {
+    font-style : normal;
+    font-weight: normal;
+    font-size  : 16px;
+    line-height: 150%;
+  }
+}
+
+
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "global.scss";
 @import "home.scss";
@@ -100,4 +191,3 @@
 // letter-spacing: 0.03em;
 // text-decoration-line: underline;
 // }
-

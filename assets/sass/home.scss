@@ -1,4 +1,4 @@
-
+@import "_variables.scss";
 .container {
 
     .row {
@@ -77,7 +77,7 @@
         box-shadow: $box-shadow;
     }
     .description {
-        padding-left: 20px;
+        padding: 0px 40px 20px 40px;
     }
 
    
@@ -91,7 +91,21 @@
 }
 
 #pills-tab {
-    width: 95%;
+   width: 100%;
 
 }
 
+
+
+.license-icon {
+    background-image: url("../img/icons/licese.svg");
+}
+
+.active .license-icon {
+    background-image: url("../img/icons/licese-yelow.svg");
+}
+
+.tab-content img {
+
+    width: 300px;
+}

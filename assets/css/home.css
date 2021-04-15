@@ -1,17 +1,80 @@
-/* Error: Undefined variable.
- *    ,
- * 15 |     color: $light;
- *    |            ^^^^^^
- *    '
- *   assets/sass/home.scss 15:12  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 15 \2502      color: $light;\a    \2502             ^^^^^^\a    \2575 \a   assets/sass/home.scss 15:12  root stylesheet";
+@font-face {
+  font-family: mainFont;
+  src: url(../fonts/Caudex/Caudex-Regular.ttf);
 }
+@font-face {
+  font-family: Bilbo;
+  src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
+}
+.container .row {
+  margin: 40px 0px;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link span {
+  color: #FFFBF6;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link span {
+  color: #FB9614;
+}
+
+.nav-pills-custom {
+  height: 80px;
+  z-index: 10;
+}
+
+.nav.nav-pills button.nav-link {
+  padding: 0%;
+}
+.nav.nav-pills button.nav-link i {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.tab-content {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tab-content a {
+  width: 100%;
+}
+.tab-content a:hover {
+  color: #FB9614;
+}
+
+.tab-content .tab-pane {
+  padding-top: 45px;
+}
+.tab-content .tab-pane .carousel {
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+.tab-content .tab-pane .description {
+  padding: 0px 40px 20px 40px;
+}
+
+.tab-content {
+  position: relative;
+  bottom: 50px;
+}
+
+#pills-tab {
+  width: 100%;
+}
+
+.license-icon {
+  background-image: url("../img/icons/licese.svg");
+}
+
+.active .license-icon {
+  background-image: url("../img/icons/licese-yelow.svg");
+}
+
+.tab-content img {
+  width: 300px;
+}
+
+/*# sourceMappingURL=home.css.map */
