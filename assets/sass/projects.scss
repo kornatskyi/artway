@@ -1,0 +1,89 @@
+@import "_variables.scss";
+
+// .gallery {
+
+//     height: 700px;
+//     width : 80%;
+
+//     div>img {
+
+//         max-width : 100%;
+//         max-height: 100%;
+
+//     }
+
+//     display              : grid;
+//     grid-template-columns: 1fr 1.1fr 1fr 1fr 1fr;
+//     grid-template-rows   : 1fr 1fr 1fr 1fr;
+//     gap                  : 0px 0px;
+//     grid-template-areas  : "first first first second-1 second-1"
+//     "first first first second-1 second-1"
+//     "first first first second-2 second-2"
+//     "third-1 third-2 third-3 second-2 second-2";
+
+//     .first {
+//         grid-area: first;
+
+//     }
+
+//     .second-1 {
+//         grid-area: second-1;
+//     }
+
+//     .second-2 {
+//         grid-area: second-2;
+//     }
+
+//     .third-1 {
+//         grid-area: third-1;
+//     }
+
+//     .third-2 {
+//         grid-area: third-2;
+//     }
+
+//     .third-3 {
+//         grid-area: third-3;
+//     }
+// }
+
+
+.container.gallery {
+    .row:first-child {
+        height: 500px;
+        .col {
+            height: 500px;
+
+            
+            .row {
+                height: 250px;
+            }
+        }
+    }
+    .row:nth-child(2) {
+        height: 200px;
+        .col {
+            height: 200px;
+        }
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .more-img {
+
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+    }
+    a {
+        position: relative;
+        bottom: 50%;
+        color: #d3d3d3;
+        text-align: center;
+        font-size: 20px;
+    }
+
+
+}

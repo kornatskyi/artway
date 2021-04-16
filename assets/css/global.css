@@ -29,4 +29,27 @@ header .navbar-light .navbar-nav .nav-link:hover {
   color: #FB9614;
 }
 
+footer {
+  background-color: #222222;
+}
+footer .container {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+footer .container div ul li a:hover {
+  color: #FB9614;
+}
+footer .container div a {
+  color: #FFFBF6;
+}
+footer .container div a:hover {
+  color: #FB9614;
+}
+footer .container div a i:hover {
+  color: #FB9614;
+}
+footer * {
+  color: #FFFBF6;
+}
+
 /*# sourceMappingURL=global.css.map */

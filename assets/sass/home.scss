@@ -9,132 +9,233 @@ body {
         background-repeat  : no-repeat;
         background-size    : cover;
         background-position: center;
-
-        width  : 100%;
-        height : $background-height;
-        z-index: -1;
+        width              : 100%;
+        height             : $background-height;
+        z-index            : -1;
     }
 
-    & > .container.container-fluid > .row:first-child {
-        height: 700px;
+    &>.container.container-fluid>.row:first-child {
+        height: $background-height;
     }
-
 
     .title {
-        
+
         display        : flex;
         flex-direction : column;
         justify-content: center;
         align-items    : center;
         padding        : 0px;
-        margin-top: 20px;
-    
+        margin-top     : 20px;
+
         h1 {
             font-weight: normal;
         }
+
         .title_decoration {
             background-image   : url("../../assets/img/icons/decoration.svg");
             background-repeat  : no-repeat;
             background-position: center;
             background-size    : contain;
-        
-            height             : 50px;
-            width              : 95%;
-    
+
+            height: 50px;
+            width : 95%;
+
         }
+
         .title-quote {
-            color: $light;
-            padding: 20px 10px;
+            color     : $light;
+            padding   : 20px 10px;
             text-align: center;
         }
-        
+
     }
 
+    //Services section
+    .row.services {
+        .col {
+            display: flex;
+            flex-direction: column;
+
+            .nav {
+                width: 100%;
+                background-color: $primary;
+                display: flex;
+                
+                .nav-item {
+                    //fits elements in one line
+                    width: 25%;
+                    height: 100%;
+                    
+                    .nav-link {
+                        color: $light;
+                        height: 100%;
+                        padding: 0px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 15px;
+                        span {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            line-height: 15px;
+                        }
+                        &.active {
+                            color: $secondary;
+                            border: 2px solid $secondary;
+                            border-radius: 0px;
+                            border-top-style: none;
+                            border-right-style: none;
+                            border-left-style: none;
+                            border-bottom-style: solid;
+                        }
+
+                        i {
+                            background-repeat: no-repeat;
+                            background-size  : 100%;
+                            width            : 30px;
+                            height           : 30px;
+                            display          : block;
+
+                        }
+
+                        .interior-icon {}
+
+                        .exterior-icon {}
+
+
+                        .commercial-icon {}
+
+
+                        .multi-family-icon {}
+
+                    }
+                }
+
+            }
+
+            .tab-content {
+                box-shadow: $box-shadow;
+                
+                .tab-pane {
+                    padding-top: 15px;
+                    &.active {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .description {
+                        padding: 0px 40px 20px 40px;
+                    }
+
+                    .carousel {
+                        width     : 90%;
+                        box-shadow: $box-shadow;
+                        margin: auto;
+                    }
+                }
+
+            }
 
 
 
-    //Tabs color
-    //Tabs
-    .nav-pills .nav-link,
-    .nav-pills .show>.nav-link span {
-        color: $light;
-    }
 
-    .nav-pills .nav-link.active,
-    .nav-pills .show>.nav-link span {
-        color: $secondary;
-    }
-
-    .nav-pills-custom {
-        height : 80px;
-        z-index: 10;
-    }
-
-    .nav.nav-pills button.nav-link {
-        padding: 0%;
-
-        & i {
-            background-repeat: no-repeat;
-            background-size  : 100%;
-            width            : 30px;
-            height           : 30px;
-            display          : block;
 
         }
-
-        .interior-icon {}
-
-        .exterior-icon {}
-
-
-        .commercial-icon {}
-
-
-        .multi-family-icon {}
-
     }
 
-    .tab-content {
-        box-shadow: $box-shadow;
 
-        a {
-            width: 100%;
+
+    .row.licenses {
+        .col {
+            display: flex;
+            flex-direction: column;
+
+            .nav {
+                width: 100%;
+                background-color: $primary;
+                display: flex;
+                
+                .nav-item {
+                    //fits elements in one line
+                    width: 25%;
+                    height: 100%;
+                    
+                    .nav-link {
+                        color: $light;
+                        height: 100%;
+                        padding: 0px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-top: 15px;
+                        span {
+                            padding-top: 5px;
+                            padding-bottom: 5px;
+                            line-height: 15px;
+                        }
+                        &.active {
+                            color: $secondary;
+                            border: 2px solid $secondary;
+                            border-radius: 0px;
+                            border-top-style: none;
+                            border-right-style: none;
+                            border-left-style: none;
+                            border-bottom-style: solid;
+                        }
+
+                        i {
+                            background-repeat: no-repeat;
+                            background-size  : 100%;
+                            width            : 30px;
+                            height           : 30px;
+                            display          : block;
+
+                        }
+
+                        .interior-icon {}
+
+                        .exterior-icon {}
+
+
+                        .commercial-icon {}
+
+
+                        .multi-family-icon {}
+
+                    }
+                }
+
+            }
+
+            .tab-content {
+                box-shadow: $box-shadow;
+                
+                .tab-pane {
+                    padding-top: 15px;
+                    &.active {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .description {
+                        padding: 0px 40px 20px 40px;
+                    }
+
+                    .carousel {
+                        width     : 90%;
+                        box-shadow: $box-shadow;
+                        margin: auto;
+                    }
+                }
+
+            }
+
+
+
+
+
         }
-
-        a:hover {
-            color: $secondary;
-        }
     }
-
-    .tab-content .tab-pane {
-
-        padding-top: 45px;
-
-        .carousel {
-            width     : 90%;
-            box-shadow: $box-shadow;
-        }
-
-        .description {
-            padding: 0px 40px 20px 40px;
-        }
-
-
-    }
-
-    .tab-content {
-        position: relative;
-        bottom  : 50px;
-
-
-    }
-
-    .nav-pills {
-        width: 100%;
-
-    }
-
-
 
     .license-icon {
         background-image: url("../img/icons/licese.svg");

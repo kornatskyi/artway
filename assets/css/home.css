@@ -13,11 +13,11 @@ body .background {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 700px;
+  height: 95vh;
   z-index: -1;
 }
 body > .container.container-fluid > .row:first-child {
-  height: 700px;
+  height: 95vh;
 }
 body .title {
   display: flex;
@@ -43,53 +43,127 @@ body .title .title-quote {
   padding: 20px 10px;
   text-align: center;
 }
-body .nav-pills .nav-link,
-body .nav-pills .show > .nav-link span {
+body .row.services .col {
+  display: flex;
+  flex-direction: column;
+}
+body .row.services .col .nav {
+  width: 100%;
+  background-color: #222222;
+  display: flex;
+}
+body .row.services .col .nav .nav-item {
+  width: 25%;
+  height: 100%;
+}
+body .row.services .col .nav .nav-item .nav-link {
   color: #FFFBF6;
+  height: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
 }
-body .nav-pills .nav-link.active,
-body .nav-pills .show > .nav-link span {
+body .row.services .col .nav .nav-item .nav-link span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 15px;
+}
+body .row.services .col .nav .nav-item .nav-link.active {
   color: #FB9614;
+  border: 2px solid #FB9614;
+  border-radius: 0px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style: solid;
 }
-body .nav-pills-custom {
-  height: 80px;
-  z-index: 10;
-}
-body .nav.nav-pills button.nav-link {
-  padding: 0%;
-}
-body .nav.nav-pills button.nav-link i {
+body .row.services .col .nav .nav-item .nav-link i {
   background-repeat: no-repeat;
   background-size: 100%;
   width: 30px;
   height: 30px;
   display: block;
 }
-body .tab-content {
+body .row.services .col .tab-content {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
-body .tab-content a {
-  width: 100%;
+body .row.services .col .tab-content .tab-pane {
+  padding-top: 15px;
 }
-body .tab-content a:hover {
-  color: #FB9614;
+body .row.services .col .tab-content .tab-pane.active {
+  display: flex;
+  flex-direction: column;
 }
-body .tab-content .tab-pane {
-  padding-top: 45px;
-}
-body .tab-content .tab-pane .carousel {
-  width: 90%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-}
-body .tab-content .tab-pane .description {
+body .row.services .col .tab-content .tab-pane .description {
   padding: 0px 40px 20px 40px;
 }
-body .tab-content {
-  position: relative;
-  bottom: 50px;
+body .row.services .col .tab-content .tab-pane .carousel {
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
 }
-body .nav-pills {
+body .row.licenses .col {
+  display: flex;
+  flex-direction: column;
+}
+body .row.licenses .col .nav {
   width: 100%;
+  background-color: #222222;
+  display: flex;
+}
+body .row.licenses .col .nav .nav-item {
+  width: 25%;
+  height: 100%;
+}
+body .row.licenses .col .nav .nav-item .nav-link {
+  color: #FFFBF6;
+  height: 100%;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15px;
+}
+body .row.licenses .col .nav .nav-item .nav-link span {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 15px;
+}
+body .row.licenses .col .nav .nav-item .nav-link.active {
+  color: #FB9614;
+  border: 2px solid #FB9614;
+  border-radius: 0px;
+  border-top-style: none;
+  border-right-style: none;
+  border-left-style: none;
+  border-bottom-style: solid;
+}
+body .row.licenses .col .nav .nav-item .nav-link i {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+body .row.licenses .col .tab-content {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+body .row.licenses .col .tab-content .tab-pane {
+  padding-top: 15px;
+}
+body .row.licenses .col .tab-content .tab-pane.active {
+  display: flex;
+  flex-direction: column;
+}
+body .row.licenses .col .tab-content .tab-pane .description {
+  padding: 0px 40px 20px 40px;
+}
+body .row.licenses .col .tab-content .tab-pane .carousel {
+  width: 90%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin: auto;
 }
 body .license-icon {
   background-image: url("../img/icons/licese.svg");

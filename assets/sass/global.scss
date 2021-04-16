@@ -36,5 +36,39 @@ header {
 
 
 
+footer {
+    background-color: $primary;
+    .container {
+        padding-top: 10px ;
+        padding-bottom: 40px ;
+        div {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color:$secondary;
+                        }
+                    }
+                }
+            }
+            a {
+                color: $light;
+                &:hover {
+                    color:$secondary;
+                }
+                i {
+                    &:hover {
+                        color: $secondary;
+                    }
+                   
+                }
+            }
+        }
+    }
+    * {
+        color: $light;
+    
+    }
 
+}
 
