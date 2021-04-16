@@ -52,7 +52,12 @@ body {
     line-height: 133%;
   }
 
-  h6 {}
+  h6 {
+    font-style : normal;
+    font-size  : 25px;
+    line-height: 133%;
+    
+  }
 
   p {
     font-style : normal;
@@ -105,11 +110,10 @@ body {
 }
 
 
-
-
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "global.scss";
 @import "home.scss";
+
 
 
 

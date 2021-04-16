@@ -1,111 +1,120 @@
 @import "_variables.scss";
-.container {
 
-    .row {
-        margin: 40px 0px;
+.container {}
 
-    }
-}
+body {
 
+    .background {
+        position           : absolute;
+        background-image   : url("../img/main_background.jpg");
+        background-repeat  : no-repeat;
+        background-size    : cover;
+        background-position: center;
 
-//Tabs color
-//Tabs
-.nav-pills .nav-link,
-.nav-pills .show>.nav-link span {
-    color: $light;
-}
-
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link span {
-    color: $secondary;
-}
-
-.nav-pills-custom {
-    height: 80px;
-    z-index: 10;
-}
-
-.nav.nav-pills button.nav-link {
-    padding: 0%;
-    & i {
-        background-repeat: no-repeat;
-        background-size  : 100%;
-        width            : 30px;
-        height           : 30px;
-        display          : block;
-
-    }
-
-    .interior-icon {
-            
-    }
-
-    .exterior-icon {
-
-       
+        width  : 100%;
+        height : $background-height;
+        z-index: -1;
     }
 
 
-    .commercial-icon {
 
 
+
+
+
+    //Tabs color
+    //Tabs
+    .nav-pills .nav-link,
+    .nav-pills .show>.nav-link span {
+        color: $light;
     }
 
-
-    .multi-family-icon {
-
-        
-    }
-
-}
-
-.tab-content {
-    box-shadow: $box-shadow;
-    a { 
-        width: 100%;
-    }
-    a:hover {
+    .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link span {
         color: $secondary;
     }
-}
 
-.tab-content .tab-pane {
-    
-    padding-top: 45px;
-    .carousel {
-        width: 90%;
+    .nav-pills-custom {
+        height : 80px;
+        z-index: 10;
+    }
+
+    .nav.nav-pills button.nav-link {
+        padding: 0%;
+
+        & i {
+            background-repeat: no-repeat;
+            background-size  : 100%;
+            width            : 30px;
+            height           : 30px;
+            display          : block;
+
+        }
+
+        .interior-icon {}
+
+        .exterior-icon {}
+
+
+        .commercial-icon {}
+
+
+        .multi-family-icon {}
+
+    }
+
+    .tab-content {
         box-shadow: $box-shadow;
+
+        a {
+            width: 100%;
+        }
+
+        a:hover {
+            color: $secondary;
+        }
     }
-    .description {
-        padding: 0px 40px 20px 40px;
+
+    .tab-content .tab-pane {
+
+        padding-top: 45px;
+
+        .carousel {
+            width     : 90%;
+            box-shadow: $box-shadow;
+        }
+
+        .description {
+            padding: 0px 40px 20px 40px;
+        }
+
+
     }
 
-   
-}
+    .tab-content {
+        position: relative;
+        bottom  : 50px;
 
-.tab-content {
-    position: relative;
-    bottom: 50px;
-    
 
-}
+    }
 
-#pills-tab {
-   width: 100%;
+    .nav-pills {
+        width: 100%;
 
-}
+    }
 
 
 
-.license-icon {
-    background-image: url("../img/icons/licese.svg");
-}
+    .license-icon {
+        background-image: url("../img/icons/licese.svg");
+    }
 
-.active .license-icon {
-    background-image: url("../img/icons/licese-yelow.svg");
-}
+    .active .license-icon {
+        background-image: url("../img/icons/licese-yelow.svg");
+    }
 
-.tab-content img {
+    .tab-content img {
 
-    width: 300px;
+        width: 300px;
+    }
 }

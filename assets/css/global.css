@@ -9,11 +9,24 @@
 header .navbar-custom .navbar-toggler-icon {
   background-image: url("../../assets/img/icons/menu-togler.svg");
 }
-header .navbar-brand {
-  margin: 10px;
+header .navbar {
+  background-color: #222222;
 }
 header .nav-item {
   text-align: center;
+}
+header .navbar-brand {
+  height: 100px;
+  margin: 10px 40px;
+}
+header .navbar-brand img {
+  height: 100%;
+}
+header .navbar-light .navbar-nav .nav-link {
+  color: #FFFBF6;
+}
+header .navbar-light .navbar-nav .nav-link:hover {
+  color: #FB9614;
 }
 
 .title {

@@ -12,18 +12,20 @@
   <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
   <script defer src="node_modules/@fortawesome/fontawesome-free/js/solid.js"></script>
   <script defer src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"></script>
-  <script defer src="js/getReviews.js"></script>
   <!-- <link rel="stylesheet" href="/assets/css/home.css"> -->
   <link rel="stylesheet" href="/assets/css/style.css">
   <!-- <link rel="stylesheet" href="/assets/css/global.css"> -->
+
 </head>
 
 <body class="bg-light">
 
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href=""><img src="assets/img/logo-154x149.png" alt="ArtWay painting company"></a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+
+        <a class="navbar-brand" href="">
+          <img src="assets/img/logo-154x149.png" alt="ArtWay painting company">
+        </a>
         <button class="navbar-toggler navbar-custom" type="button" data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -36,54 +38,57 @@
                 href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom text-light fs-3" href="services.html">Services</a>
+              <a class="nav-link nav-link-custom fs-3" href="services.html">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom text-light fs-3" href="projects.html">Projects</a>
+              <a class="nav-link nav-link-custom fs-3" href="projects.html">Projects</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom text-light fs-3" href="blog.html">News</a>
+              <a class="nav-link nav-link-custom fs-3" href="blog.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link nav-link-custom text-light fs-3" href="contactus.html">Contact Us</a>
+              <a class="nav-link nav-link-custom fs-3" href="contactus.html">Contact Us</a>
             </li>
           </ul>
         </div>
-      </div>
+
     </nav>
   </header>
-  <div class="container-fluid">
+  <div class="background"></div>
+  <div class="container container-fluid">
     <div class="row">
-      <div class="title">
-        <span class="fs-1 text-secondary bilbo-font">
-          ARTWAY <br> Construction
-        </span>
-        <i class="title_decoration">
-
-        </i>
-        <span class="fs-3">
-          We are proud to be your painters
-        </span>
-      </div>
-
-    </div>
-    <div class="row row justify-content-center">
-      <div class="col-10">
-        <form>
-          <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
+      <div class="col">
+        <div class="row">
+          <div class="title">
+            <span class="fs-1 text-secondary bilbo-font">
+              ARTWAY <br> Construction
+            </span>
+            <i class="title_decoration">
+            </i>
+            <span class="fs-3">
+              We are proud to be your painters
+            </span>
           </div>
-          <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="floatingName" placeholder="Name">
-            <label for="floatingName">Name</label>
+        </div>
+        <div class="row row justify-content-center">
+          <div class="col-10">
+            <form>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="floatingName" placeholder="Name">
+                <label for="floatingName">Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="tel" class="form-control" id="floatingPhone" placeholder="Phone number" pattern="[0-9]{1}">
+                <label for="floatingPhone">Phone number</label>
+              </div>
+              <button class="btn col-12 btn-block btn-secondary text-light" type="submit">GET ESTIMATE</button>
+            </form>
           </div>
-          <div class="form-floating mb-3">
-            <input type="tel" class="form-control" id="floatingPhone" placeholder="Phone number" pattern="[0-9]{1}">
-            <label for="floatingPhone">Phone number</label>
-          </div>
-          <button class="btn col-12 btn-block btn-secondary text-light" type="submit">GET ESTIMATE</button>
-        </form>
+        </div>
       </div>
     </div>
     <div class="row ">
@@ -279,7 +284,7 @@
           </div>
           <div class="d-flex">
             <a class="text-end p-3" href="projects.html">
-              See more in our galery >
+              See more in our galery
             </a>
           </div>
         </div>
@@ -293,7 +298,7 @@
 
       <div class="col p-0 d-flex flex-column align-content-center justify-content-center">
         <h2 class="m-3">We are licensed and inssured</h2>
-        <ul class="nav nav-pills align-self-center nav-fill mb-3 bg-dark nav-pills-custom" id="pills-tab"
+        <ul class="nav nav-pills align-self-center nav-fill mb-3 bg-dark nav-pills-custom" id="pills-tab-licenses"
           role="tablist">
 
           <li class="nav-item d-flex align-items-center " role="presentation">
@@ -332,7 +337,8 @@
               Status <span style="color: green;">Active</span><br>
               State Washington<br>
 
-              <a href="#" style="color: blueviolet;">Verify</a> this license's status for Artway Construction at the Washington State Department of Labor &
+              <a href="#" style="color: blueviolet;">Verify</a> this license's status for Artway Construction at the
+              Washington State Department of Labor &
               Industries.
             </div>
             <div class="d-flex"><img class="m-auto" src="assets/img/licensed-trenspa.png" alt=""></div>
@@ -357,9 +363,9 @@
         </div>
       </div>
     </div>
- 
-    
- 
+
+
+
   </div>
 
 

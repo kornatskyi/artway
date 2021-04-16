@@ -1,19 +1,42 @@
 @import "_variables.scss";
 
+
+
 header {
     .navbar-custom .navbar-toggler-icon {
         background-image: url("../../assets/img/icons/menu-togler.svg");
     }
 
-    .navbar-brand {
-        margin: 10px;
+    .navbar {
+        background-color: $primary;
     }
 
     .nav-item {
         text-align: center;
 
     }
+
+    .navbar-brand {
+        height: 100px;
+        margin: 10px 40px;
+
+        img {
+            height: 100%;
+        }
+    }
+    .navbar-light .navbar-nav .nav-link {
+        color: $light;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: $secondary;
+    }
+
 }
+
+
+
+
 
 
 .title {
@@ -34,4 +57,3 @@ header {
 
     }
 }
-
