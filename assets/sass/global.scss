@@ -38,22 +38,3 @@ header {
 
 
 
-
-.title {
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items    : center;
-    padding        : 0px;
-
-
-    .title_decoration {
-        background-image   : url("../../assets/img/icons/decoration.svg");
-        background-repeat  : no-repeat;
-        background-position: center;
-        background-size    : contain;
-        height             : 50px;
-        width              : 100%;
-
-    }
-}

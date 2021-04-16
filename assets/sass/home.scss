@@ -1,6 +1,5 @@
 @import "_variables.scss";
 
-.container {}
 
 body {
 
@@ -16,8 +15,40 @@ body {
         z-index: -1;
     }
 
+    & > .container.container-fluid > .row:first-child {
+        height: 700px;
+    }
 
 
+    .title {
+        
+        display        : flex;
+        flex-direction : column;
+        justify-content: center;
+        align-items    : center;
+        padding        : 0px;
+        margin-top: 20px;
+    
+        h1 {
+            font-weight: normal;
+        }
+        .title_decoration {
+            background-image   : url("../../assets/img/icons/decoration.svg");
+            background-repeat  : no-repeat;
+            background-position: center;
+            background-size    : contain;
+        
+            height             : 50px;
+            width              : 95%;
+    
+        }
+        .title-quote {
+            color: $light;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        
+    }
 
 
 

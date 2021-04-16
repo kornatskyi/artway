@@ -10937,22 +10937,6 @@ header .navbar-light .navbar-nav .nav-link:hover {
   color: #FB9614;
 }
 
-.title {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-}
-.title .title_decoration {
-  background-image: url("../../assets/img/icons/decoration.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  height: 50px;
-  width: 100%;
-}
-
 @font-face {
   font-family: mainFont;
   src: url(../fonts/Caudex/Caudex-Regular.ttf);
@@ -10968,8 +10952,35 @@ body .background {
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 650px;
+  height: 700px;
   z-index: -1;
+}
+body > .container.container-fluid > .row:first-child, body > .container.container-sm > .row:first-child, body > .container.container-md > .row:first-child, body > .container.container-lg > .row:first-child, body > .container.container-xl > .row:first-child, body > .container.container-xxl > .row:first-child {
+  height: 700px;
+}
+body .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  margin-top: 20px;
+}
+body .title h1, body .title .h1 {
+  font-weight: normal;
+}
+body .title .title_decoration {
+  background-image: url("../../assets/img/icons/decoration.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 50px;
+  width: 95%;
+}
+body .title .title-quote {
+  color: #FFFBF6;
+  padding: 20px 10px;
+  text-align: center;
 }
 body .nav-pills .nav-link,
 body .nav-pills .show > .nav-link span {
