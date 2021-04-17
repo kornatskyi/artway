@@ -11,53 +11,55 @@
   flex-direction: column;
   padding: 20px;
 }
-.my-container .gallery {
+.my-container .project .gallery {
+  max-width: 800px;
+  max-height: 700px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(8, 5vw);
+  grid-template-rows: repeat(8, 1fr);
   grid-gap: 15px;
 }
-.my-container .gallery div img {
+.my-container .project .gallery div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.my-container .gallery .first {
+.my-container .project .gallery .first {
   grid-area: first;
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 6;
 }
-.my-container .gallery .second-1 {
+.my-container .project .gallery .second-1 {
   grid-area: second-1;
   grid-column-start: 7;
   grid-column-end: 10;
   grid-row-start: 1;
   grid-row-end: 5;
 }
-.my-container .gallery .second-2 {
+.my-container .project .gallery .second-2 {
   grid-area: second-2;
   grid-column-start: 7;
   grid-column-end: 10;
   grid-row-start: 5;
   grid-row-end: 9;
 }
-.my-container .gallery .third-1 {
+.my-container .project .gallery .third-1 {
   grid-area: third-3;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-.my-container .gallery .third-2 {
+.my-container .project .gallery .third-2 {
   grid-area: third-2;
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-.my-container .gallery .third-3 {
+.my-container .project .gallery .third-3 {
   grid-area: third-1;
   grid-column-start: 5;
   grid-column-end: 7;
