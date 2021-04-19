@@ -1,9 +1,10 @@
-'use strict';
+"use strict";
 
-let htmlContainer = document.createElement('div');
+
+
+let htmlContainer = document.createElement("div");
 let projectFrame = (name, date, description, imagesLinks) => {
-    return `<div class="project">
-            <div class="project-header">
+    return `<div class="project-header">
               <h5>${name}</h5>
               <span>Date ${date}</span>
             </div>
@@ -33,88 +34,80 @@ let projectFrame = (name, date, description, imagesLinks) => {
               <div class="description">
                   <p>${description}</p>
               </div>
-          </div>
-        </div>`
-}
-let imagesPaths = [];
+          </div>`;
+};
 
 
 
-
-
-fetch(`http://192.168.0.9:5500/assets/img/gallery/project-1`, {
+fetch("http://192.168.0.9:5500/assets/img/gallery", {
     headers: {
-        'Content-Type': 'text/html',
-        'Accept': 'text/html'
+        "Content-Type": "text/html",
+        Accept: "text/html",
+    },
+}).then(response => {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    }
+    return response.text();
+}).then(galleryHTMLString => {
+    let galleryHTML = document.createElement('div')
+    galleryHTML.innerHTML = galleryHTMLString;
+    console.log(galleryHTML);
+    galleryHTML.querySelector("#files").childElementCount;
+    for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
+        fetch(`http://192.168.0.9:5500/assets/img/gallery/project-${i}`, {
+            headers: {
+                "Content-Type": "text/html",
+                Accept: "text/html",
+            },
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw Error(response.statusText);
+                }
+                return response.text();
+            })
+            .then((htmlString) => {
+
+                let imagesPaths;
+                let projectInfo;
+                let imagesAnchorns;
+                let infoAnchorn;
+                //Container for HTML. By whitch you can get acces to its components
+                htmlContainer.innerHTML = htmlString;
+                console.log(htmlContainer);
+
+                //Get NodeList of <a> elements that link to images in requested directory. And convert in to Array.
+                imagesAnchorns = Array.from(
+                    htmlContainer.querySelectorAll(".icon-image")
+                );
+                //Get link from anchorns
+                imagesPaths = imagesAnchorns.map((imgA) => imgA.getAttribute("href"));
+                console.log(imagesAnchorns);
+                //Get an <a> element that links to json file with project info
+                infoAnchorn = htmlContainer.querySelector(".icon-application-json");
+
+                fetch(infoAnchorn, {
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        projectInfo = data;
+                        console.log("Data: " + JSON.stringify(projectInfo));
+                        let projectContainer = document.createElement('div');
+                        projectContainer.className = "project";
+                        projectContainer.innerHTML = projectFrame(projectInfo.name, projectInfo.date, projectInfo.description, imagesPaths);
+                        document.querySelector("#my-container").appendChild(projectContainer);
+
+                        return projectInfo;
+                    });
+            })
+            .catch(() => {
+                console.log("error");
+            });
+
     }
 
 })
-    .then((response) => {
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        return response.text();
-
-    }).then(htmlString => {
-        //Container for HTML. By whitch you can get acces to its components 
-        htmlContainer.innerHTML = htmlString;
-        console.log(htmlContainer);
-        //Get NodeList of <a> elements that link to images in requested directory. And convert in to Array.
-        const imagesAnchorns = Array.from(htmlContainer.querySelectorAll(".icon-image"));
-        //Get link from anchorns
-        const imagesLinks = imagesAnchorns.map(imgA => imgA.getAttribute("href"))
-        console.log(imagesAnchorns);
-        //Get an <a> element that links to json file with project info
-        const infoAnchorn = htmlContainer.querySelector(".icon-application-json");
-
-        const projectInfo = fetch(`${infoAnchorn}`, {
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then(response => response.json())
-            .then(data => {
-                return data;
-            }) //should return data but return promise
-            console.log(projectInfo);
-
-
-        console.log(infoAnchorn);
-
-    }).catch(() => {
-        console.log("error");
-    })
-
-
-//   .then((stringHtml) => {
-    //   htmlContainer.innerHTML = stringHtml;
-    //   console.log(htmlContainer);
-    //   console.log(Array.from(htmlContainer.getElementsByClassName("icon-image")).map(x => x.getAttribute('href')));
-    //   imagesPaths = Array.from(htmlContainer.getElementsByClassName("icon-image")).map(x => {
-    //     document.getElementsByClassName(`image-${i}`)[Array.from(htmlContainer.getElementsByClassName("icon-image")).indexOf(x)].setAttribute("src", x.getAttribute('href'))
-    //   });
-//   });
-
-
-
-// let htmlContainer = document.createElement('div');                  
-
-// fetch("http://192.168.0.9:5500/assets/img/gallery/project-1", {
-//         headers : { 
-//       'Content-Type': 'text/html',
-//       'Accept': 'text/html',
-
-//      }
-// }).then(response => response.text())
-//     .then((stringHtml) => {
-//         htmlContainer.innerHTML = stringHtml;            //convert plain text to Html to have acces to its elements
-
-//         //htmlContainer will containe html representation of our project diretories and files, so from there will be able to get files paths
-//        console.log( Array.from(htmlContainer
-//                             .querySelector('#files')
-//                                 .querySelectorAll("li>a"))
-//                                     .map( x => x.getAttribute('href'))) //will print an array with all file and direcotory paths in our directory
-
-//     })
-
-
-
