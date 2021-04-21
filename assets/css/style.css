@@ -10933,6 +10933,9 @@ header .navbar-brand img {
 header .navbar-light .navbar-nav .nav-link {
   color: #FFFBF6;
 }
+header .navbar-light .navbar-nav .nav-link.active {
+  color: #FB9614;
+}
 header .navbar-light .navbar-nav .nav-link:hover {
   color: #FB9614;
 }

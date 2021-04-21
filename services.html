@@ -5,31 +5,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/services.css">
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+  <script
+  defer
+  src="node_modules/@popperjs/core/dist/umd/popper.min.js"
+></script>
+<script
+  defer
+  src="node_modules/bootstrap/dist/js/bootstrap.min.js"
+></script>
+<script
+  defer
+  src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
+></script>
+<script
+  defer
+  src="node_modules/@fortawesome/fontawesome-free/js/solid.js"
+></script>
+<script
+  defer
+  src="node_modules/@fortawesome/fontawesome-free/js/fontawesome.js"
+></script>
+<!-- <link rel="stylesheet" href="/assets/css/home.css"> -->
+<link rel="stylesheet" href="/assets/css/style.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+
+<!-- <link rel="stylesheet" href="/assets/css/global.css"> -->
+    <link rel="stylesheet" href="/assets/css/services.css">
 </head>
 
 <body>
 
     <header>
-        <div class="header__logo">
-            <img src="/img/logo-154x149.png" alt="Logo">
-        </div>
-        <div class="header__menu">
-            <a href="#" class="header__menu__link">Home</a>
-            <a href="#" class="header__menu__link">Services</a>
-            <a href="#" class="header__menu__link">Project</a>
-            <a href="#" class="header__menu__link">About</a>
-            <a href="#" class="header__menu__link">
-                <div class="header__menu__contact-link">Contact</div>
-            </a>
-        </div>
-    </header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="">
+            <img
+              src="assets/img/logo-154x149.png"
+              alt="ArtWay painting company"
+            />
+          </a>
+          <button
+            class="navbar-toggler navbar-custom"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link nav-link-custom  fs-3"
+                  aria-current="page"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom active fs-3" href="services.html"
+                  >Services</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom fs-3" href="projects.html"
+                  >Projects</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom fs-3" href="blog.html">News</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-link-custom fs-3" href="contactus.html"
+                  >Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
 
 
     <div class="container">
         <div class="exterior">
-            <img class="exterior__img" src="/img/services_img/exterior.jpeg" alt="">
+            <img class="exterior__img" src="assets/img/services_img/exterior.jpeg" alt="">
 
             <div class="exterior__description description">
                 <p class="exterior__description__title services-title">Exterior Painting</p>
@@ -44,7 +106,7 @@
 
         </div>
         <div class="interior">
-            <img class="interior__img" src="/img/services_img/interior.jpeg" alt="">
+            <img class="interior__img" src="assets/img/services_img/interior.jpeg" alt="">
 
             <div class="interior__description description">
                 <p class="interior__description__title services-title">Interior Painting</p>
@@ -60,7 +122,7 @@
 
         </div>
         <div class="commercial">
-            <img class="commercial__img" src="/img/services_img/commercial.jpg" alt="">
+            <img class="commercial__img" src="assets/img/services_img/commercial.jpg" alt="">
 
             <div class="commercial__description description">
                 <p class="commercial__description__title services-title">Commercial Painting</p>
@@ -86,37 +148,59 @@
                 </ul>
             </div>
             <div class="multi__img-container">
-                <img class="multi1" src="/img/services_img/multi1.jpg" alt="">
-                <img class="multi2" src="/img/services_img/multi2.jpg" alt="">
+                <img class="multi1" src="assets/img/services_img/multi1.jpg" alt="">
+                <img class="multi2" src="assets/img/services_img/multi2.jpg" alt="">
             </div>
 
 
         </div>
     </div>
 
-    <footer>
-        <div class="footer__menu">
-            <a href="#" class="footer__menu__link">Home</a>
-            <a href="#" class="footer__menu__link">Services</a>
-            <a href="#" class="footer__menu__link">Project</a>
-            <a href="#" class="footer__menu__link">About</a>
+    <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-3 col-sm-2 offset-1">
+              <h6>Links</h6>
+              <ul class="list-unstyled">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="#">Sites</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-8 col-sm-5 text-center">
+              <h6>Social</h6>
+              <a
+                class="btn btn-social-icon btn-instagram"
+                href="http://yelp.com/"
+                ><i class="fab fa-yelp fa-2x"></i>
+              </a>
+              <a
+                class="btn btn-social-icon btn-facebook"
+                href="http://facebook.com/"
+                ><i class="fab fa-facebook-f fa-2x"></i>
+              </a>
+              <a
+                class="btn btn-social-icon btn-twitter"
+                href="http://telegram.org/"
+                ><i class="fab fa-telegram-plane fa-2x"></i></a>
+              <a class="btn btn-social-icon btn-google" href="http://linkedin.com/"
+                ><i class="fab fa-linkedin-in fa-2x"></i></a>
+            </div>
+            <div class="col col-sm-4 text-center">
+              <a role="button" class="btn btn-link" href="tel:+12065551234"
+                ><i class="fa fa-phone"></i> 1-206-555-1234</a
+              ><br />
+              <a
+                role="button"
+                class="btn btn-link"
+                href="mailto:artwayconstruction@gmail.com"
+                ><i class="far fa-envelope"></i>artwayconstruction@gmail.com</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="footer_contact-info">
-            Contact information <br>
-            Email: <a href="#">artwayconstruction@gmail.com</a> <br>
-            Phone: <a href="#">206 (825) - 00 00 </a><br>
-            Located in: <span style="color: #FB9614">Overlook At Lakemont Apartments</span><br>
-            Address: <span style="color: #FB9614">5411 Village Park Dr SE, Bellevue, WA 98006</span>
-        </div>
-        <div class="footer__media-links">
-            <a href="#"><img src="img/icons/yelp_23x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/facebook-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/telegram-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/linkedin-30x30.png" alt="#"></a>
-            <a href="#"><img src="img/icons/you-tube-30x30.png" alt="#"></a>
-        </div>
-
-    </footer>
+      </footer>
 
 
 </body>

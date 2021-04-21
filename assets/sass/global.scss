@@ -25,6 +25,9 @@ header {
         }
     }
     .navbar-light .navbar-nav .nav-link {
+        &.active {
+            color: $secondary;
+        }
         color: $light;
     }
 

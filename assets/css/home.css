@@ -165,14 +165,43 @@ body .row.licenses .col .tab-content .tab-pane .carousel {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   margin: auto;
 }
-body .license-icon {
+body .licenses .col .my-card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: #222222;
+  color: #FFFBF6;
+}
+body .licenses .col .my-card-header * {
+  margin: 0 10px;
+}
+body .licenses .col .my-card-header i {
+  width: 40px;
+  height: 40px;
+  color: red;
+}
+body .licenses .col .my-card-header span {
+  font-size: 1.25rem;
+}
+body .licenses .col .my-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+body .licenses .col .my-card-body .image-container img {
+  width: 100%;
+}
+body .licenses .license-icon {
   background-image: url("../img/icons/licese.svg");
 }
-body .active .license-icon {
+body .licenses .active .license-icon {
   background-image: url("../img/icons/licese-yelow.svg");
-}
-body .tab-content img {
-  width: 300px;
 }
 
 /*# sourceMappingURL=home.css.map */

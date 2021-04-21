@@ -237,16 +237,57 @@ body {
         }
     }
 
-    .license-icon {
-        background-image: url("../img/icons/licese.svg");
-    }
+    .licenses {
+        .col {
+            .my-card-header {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                height: 60px;
+                background-color: $primary;
+                color: $light;
+                * {
+                    margin: 0 10px;
+                }
 
-    .active .license-icon {
-        background-image: url("../img/icons/licese-yelow.svg");
-    }
+                i {
+                    width: 40px;
+                    height: 40px;
+                    color: red;
+                }
+                span {
+                    font-size: $h5-font-size;
+                }
+                
+            }
 
-    .tab-content img {
+            .my-card-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                padding: 20px;
+                background-color: $white;
+                box-shadow: $box-shadow;
+                .image-container {
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            
+        }
 
-        width: 300px;
+        .license-icon {
+            background-image: url("../img/icons/licese.svg");
+        }
+    
+        .active .license-icon {
+            background-image: url("../img/icons/licese-yelow.svg");
+        }
+        
+
     }
+   
 }

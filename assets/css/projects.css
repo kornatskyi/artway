@@ -6,60 +6,68 @@
   font-family: Bilbo;
   src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
 }
-.my-container {
+body {
+  background-color: #FFFBF6;
+}
+body .container .row .col .my-container {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  align-items: center;
 }
-.my-container .project .gallery {
-  max-width: 800px;
+body .container .row .col .my-container .project {
+  max-width: 1000px;
+}
+body .container .row .col .my-container .project .gallery {
+  max-width: 1000px;
   max-height: 700px;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 15px;
 }
-.my-container .project .gallery div img {
+body .container .row .col .my-container .project .gallery div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
-.my-container .project .gallery .first {
+body .container .row .col .my-container .project .gallery .first {
   grid-area: first;
   grid-column-start: 1;
   grid-column-end: 7;
   grid-row-start: 1;
   grid-row-end: 6;
 }
-.my-container .project .gallery .second-1 {
+body .container .row .col .my-container .project .gallery .second-1 {
   grid-area: second-1;
   grid-column-start: 7;
   grid-column-end: 10;
   grid-row-start: 1;
   grid-row-end: 5;
 }
-.my-container .project .gallery .second-2 {
+body .container .row .col .my-container .project .gallery .second-2 {
   grid-area: second-2;
   grid-column-start: 7;
   grid-column-end: 10;
   grid-row-start: 5;
   grid-row-end: 9;
 }
-.my-container .project .gallery .third-1 {
+body .container .row .col .my-container .project .gallery .third-1 {
   grid-area: third-3;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-.my-container .project .gallery .third-2 {
+body .container .row .col .my-container .project .gallery .third-2 {
   grid-area: third-2;
   grid-column-start: 3;
   grid-column-end: 5;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-.my-container .project .gallery .third-3 {
+body .container .row .col .my-container .project .gallery .third-3 {
   grid-area: third-1;
   grid-column-start: 5;
   grid-column-end: 7;

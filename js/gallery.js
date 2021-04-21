@@ -1,7 +1,9 @@
 "use strict";
 
 
-
+/*
+Fetch project data and put it in DOM
+*/
 let htmlContainer = document.createElement("div");
 let projectFrame = (name, date, description, imagesLinks) => {
     return `<div class="project-header">
@@ -9,23 +11,23 @@ let projectFrame = (name, date, description, imagesLinks) => {
               <span>Date ${date}</span>
             </div>
             <div class="gallery">
-              <div class="first">
-                <img class="image-2" src="${imagesLinks[0]}" alt="" />
+              <div class=" first">
+                <img class="image image-2" src="${imagesLinks[0]}" alt="" />
             </div>
-            <div class="second-1">
-             <img class="image-2" src="${imagesLinks[1]}" alt="" />
+            <div class=" second-1">
+             <img class="image image-2" src="${imagesLinks[1]}" alt="" />
             </div>
-            <div class="second-2">
-              <img class="image-2" src="${imagesLinks[2]}" alt="" />
+            <div class=" second-2">
+              <img class="image image-2" src="${imagesLinks[2]}" alt="" />
             </div>
-            <div class="third-1">
-              <img class="image-2" src="${imagesLinks[3]}" alt="" />
+            <div class=" third-1">
+              <img class="image image-2" src="${imagesLinks[3]}" alt="" />
             </div>
-            <div class="third-2">
-              <img class="image-2" src="${imagesLinks[4]}" alt="" />
+            <div class=" third-2">
+              <img class="image image-2" src="${imagesLinks[4]}" alt="" />
             </div>
-            <div class="third-3">
-              <img class="image-2" src="${imagesLinks[5]}" alt="" />
+            <div class=" third-3">
+              <img class="image image-2" src="${imagesLinks[5]}" alt="" />
             </div> 
           
 
@@ -36,8 +38,6 @@ let projectFrame = (name, date, description, imagesLinks) => {
               </div>
           </div>`;
 };
-
-
 
 fetch("http://192.168.0.9:5500/assets/img/gallery", {
     headers: {
@@ -68,7 +68,6 @@ fetch("http://192.168.0.9:5500/assets/img/gallery", {
                 return response.text();
             })
             .then((htmlString) => {
-
                 let imagesPaths;
                 let projectInfo;
                 let imagesAnchorns;
@@ -107,7 +106,15 @@ fetch("http://192.168.0.9:5500/assets/img/gallery", {
             .catch(() => {
                 console.log("error");
             });
-
     }
-
 })
+
+
+/**
+ * Interactive gallery
+ */
+
+
+
+
+
