@@ -2,6 +2,25 @@
 
 
 body {
+
+
+    .row.map-section {
+
+        margin-top: 40px;
+        .col {
+            display        : flex;
+            flex-direction : column;
+            
+            #google-maps-container {
+                height: 100%;
+                width: 100%;
+                iframe {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
     --main-bg-color:700px;
 
     .background {
@@ -20,12 +39,13 @@ body {
     }
 
     .form-row {
-        display: flex;
+        display        : flex;
         justify-content: center;
 
         input {
             height: 55px;
         }
+
         button {
             height: 45px;
 
@@ -37,6 +57,7 @@ body {
         --main-bg-color: 700px;
 
     }
+
     @media only screen and (max-width: 500px) {
         --main-bg-color: 700px;
 
@@ -148,20 +169,21 @@ body {
                     padding-top: 15px;
 
                     &.active {
-                        display        : flex;
-                        justify-content: center;
+                        display: flex;
+
 
                     }
 
                     .description {
                         padding: 0px 40px 20px 40px;
+                        width  : 100%;
                     }
 
                     .carousel {
                         width     : 90%;
                         max-width : 500px;
                         box-shadow: $box-shadow;
-                        margin    : 20px;
+                        margin    : 20px 40px;
                         align-self: center;
 
                     }

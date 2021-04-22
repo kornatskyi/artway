@@ -9,6 +9,20 @@
 body {
   --main-bg-color:700px;
 }
+body .row.map-section {
+  margin-top: 40px;
+}
+body .row.map-section .col {
+  display: flex;
+  flex-direction: column;
+}
+body .row.map-section .col #google-maps-container {
+  height: 100%;
+  width: 100%;
+}
+body .row.map-section .col #google-maps-container iframe {
+  width: 100%;
+}
 body .background {
   position: absolute;
   background-image: url("../img/main_background.jpg");
@@ -117,16 +131,16 @@ body .row.services .col .tab-content .tab-pane {
 }
 body .row.services .col .tab-content .tab-pane.active {
   display: flex;
-  justify-content: center;
 }
 body .row.services .col .tab-content .tab-pane .description {
   padding: 0px 40px 20px 40px;
+  width: 100%;
 }
 body .row.services .col .tab-content .tab-pane .carousel {
   width: 90%;
   max-width: 500px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px;
+  margin: 20px 40px;
   align-self: center;
 }
 body .row.licenses .col {
