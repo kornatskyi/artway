@@ -2,6 +2,7 @@
 
 
 body {
+    --main-bg-color:700px;
 
     .background {
         position           : absolute;
@@ -10,13 +11,38 @@ body {
         background-size    : cover;
         background-position: center;
         width              : 100%;
-        height             : $background-height;
+        height             : var(--main-bg-color);
         z-index            : -1;
     }
 
     &>.container.container-fluid>.row:first-child {
-        height: $background-height;
+        height: var(--main-bg-color);
     }
+
+    .form-row {
+        display: flex;
+        justify-content: center;
+
+        input {
+            height: 55px;
+        }
+        button {
+            height: 45px;
+
+        }
+    }
+
+
+    @media only screen and (max-width: 700px) {
+        --main-bg-color: 700px;
+
+    }
+    @media only screen and (max-width: 500px) {
+        --main-bg-color: 700px;
+
+    }
+
+
 
     .title {
 
@@ -53,39 +79,41 @@ body {
     //Services section
     .row.services {
         .col {
-            display: flex;
+            display       : flex;
             flex-direction: column;
 
             .nav {
-                width: 100%;
+                width           : 100%;
                 background-color: $primary;
-                display: flex;
-                
+                display         : flex;
+
                 .nav-item {
                     //fits elements in one line
-                    width: 25%;
+                    width : 25%;
                     height: 100%;
-                    
+
                     .nav-link {
-                        color: $light;
-                        height: 100%;
-                        padding: 0px;
-                        display: flex;
+                        color         : $light;
+                        height        : 100%;
+                        padding       : 0px;
+                        display       : flex;
                         flex-direction: column;
-                        align-items: center;
-                        padding-top: 15px;
+                        align-items   : center;
+                        padding-top   : 15px;
+
                         span {
-                            padding-top: 5px;
+                            padding-top   : 5px;
                             padding-bottom: 5px;
-                            line-height: 15px;
+                            line-height   : 15px;
                         }
+
                         &.active {
-                            color: $secondary;
-                            border: 2px solid $secondary;
-                            border-radius: 0px;
-                            border-top-style: none;
-                            border-right-style: none;
-                            border-left-style: none;
+                            color              : $secondary;
+                            border             : 2px solid $secondary;
+                            border-radius      : 0px;
+                            border-top-style   : none;
+                            border-right-style : none;
+                            border-left-style  : none;
                             border-bottom-style: solid;
                         }
 
@@ -115,12 +143,14 @@ body {
 
             .tab-content {
                 box-shadow: $box-shadow;
-                
+
                 .tab-pane {
                     padding-top: 15px;
+
                     &.active {
-                        display: flex;
-                        flex-direction: column;
+                        display        : flex;
+                        justify-content: center;
+
                     }
 
                     .description {
@@ -129,8 +159,11 @@ body {
 
                     .carousel {
                         width     : 90%;
+                        max-width : 500px;
                         box-shadow: $box-shadow;
-                        margin: auto;
+                        margin    : 20px;
+                        align-self: center;
+
                     }
                 }
 
@@ -147,39 +180,41 @@ body {
 
     .row.licenses {
         .col {
-            display: flex;
+            display       : flex;
             flex-direction: column;
 
             .nav {
-                width: 100%;
+                width           : 100%;
                 background-color: $primary;
-                display: flex;
-                
+                display         : flex;
+
                 .nav-item {
                     //fits elements in one line
-                    width: 25%;
+                    width : 25%;
                     height: 100%;
-                    
+
                     .nav-link {
-                        color: $light;
-                        height: 100%;
-                        padding: 0px;
-                        display: flex;
+                        color         : $light;
+                        height        : 100%;
+                        padding       : 0px;
+                        display       : flex;
                         flex-direction: column;
-                        align-items: center;
-                        padding-top: 15px;
+                        align-items   : center;
+                        padding-top   : 15px;
+
                         span {
-                            padding-top: 5px;
+                            padding-top   : 5px;
                             padding-bottom: 5px;
-                            line-height: 15px;
+                            line-height   : 15px;
                         }
+
                         &.active {
-                            color: $secondary;
-                            border: 2px solid $secondary;
-                            border-radius: 0px;
-                            border-top-style: none;
-                            border-right-style: none;
-                            border-left-style: none;
+                            color              : $secondary;
+                            border             : 2px solid $secondary;
+                            border-radius      : 0px;
+                            border-top-style   : none;
+                            border-right-style : none;
+                            border-left-style  : none;
                             border-bottom-style: solid;
                         }
 
@@ -209,11 +244,12 @@ body {
 
             .tab-content {
                 box-shadow: $box-shadow;
-                
+
                 .tab-pane {
                     padding-top: 15px;
+
                     &.active {
-                        display: flex;
+                        display       : flex;
                         flex-direction: column;
                     }
 
@@ -224,7 +260,7 @@ body {
                     .carousel {
                         width     : 90%;
                         box-shadow: $box-shadow;
-                        margin: auto;
+                        margin    : auto;
                     }
                 }
 
@@ -240,54 +276,57 @@ body {
     .licenses {
         .col {
             .my-card-header {
-                display:flex;
-                justify-content: center;
-                align-items: center;
-                height: 60px;
+                display         : flex;
+                justify-content : center;
+                align-items     : center;
+                height          : 60px;
                 background-color: $primary;
-                color: $light;
+                color           : $light;
+
                 * {
                     margin: 0 10px;
                 }
 
                 i {
-                    width: 40px;
+                    width : 40px;
                     height: 40px;
-                    color: red;
+                    color : red;
                 }
+
                 span {
                     font-size: $h5-font-size;
                 }
-                
+
             }
 
             .my-card-body {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                height: 100%;
-                padding: 20px;
+                display         : flex;
+                flex-direction  : column;
+                justify-content : space-between;
+                align-items     : center;
+                height          : 100%;
+                padding         : 20px;
                 background-color: $white;
-                box-shadow: $box-shadow;
+                box-shadow      : $box-shadow;
+
                 .image-container {
                     img {
                         width: 100%;
                     }
                 }
             }
-            
+
         }
 
         .license-icon {
             background-image: url("../img/icons/licese.svg");
         }
-    
+
         .active .license-icon {
             background-image: url("../img/icons/licese-yelow.svg");
         }
-        
+
 
     }
-   
+
 }

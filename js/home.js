@@ -1,10 +1,27 @@
 'use strict';
 
 
+//Services section
 
+let serviceContainers;
+
+
+
+const serviceDisplayFunc = () => {
+  serviceContainers = Array.from(document.querySelectorAll(".tab-pane"));
+  if(window.innerWidth > 900) {
+    serviceContainers.map(serviceContainer => serviceContainer.style.flexDirection = "row") ;
+  } else {
+    serviceContainers.map(serviceContainer => serviceContainer.style.flexDirection = "column") ;
+  }
+}
+
+serviceDisplayFunc();
+window.addEventListener('resize', serviceDisplayFunc)
+
+
+//Licence section
 const licensesContainer = document.getElementById("licenses");
-
-
 
 const licensesDisplayFunc = () => {
 if(window.innerWidth < 900) {
@@ -185,4 +202,7 @@ if(window.innerWidth < 900) {
 window.onload = licensesDisplayFunc;
 
 window.addEventListener('resize', licensesDisplayFunc)
+
+
+
 
