@@ -6,5 +6,25 @@
   font-family: Bilbo;
   src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
 }
+body .container .row .col-12.service {
+  margin: 30px 0px;
+}
+body .container .row .col-12.service .card {
+  height: 100%;
+}
+body .container .row .col-12.service .card .card-body {
+  display: flex;
+  flex-direction: column;
+}
+body .container .row .col-12.service .card .card-body a {
+  background-color: #222222;
+  border-color: #222222;
+  margin-top: auto;
+  align-self: flex-start;
+}
+body .container .row .col-12.service .card .card-body a:hover {
+  border-color: #FB9614;
+  background-color: #FB9614;
+}
 
 /*# sourceMappingURL=services.css.map */
