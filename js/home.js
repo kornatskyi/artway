@@ -20,7 +20,7 @@ serviceDisplayFunc();
 window.addEventListener('resize', serviceDisplayFunc)
 
 
-//Licence section
+//Licence section for diferent sizes. 
 const licensesContainer = document.getElementById("licenses");
 
 const licensesDisplayFunc = () => {

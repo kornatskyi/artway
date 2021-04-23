@@ -10914,33 +10914,55 @@ textarea.form-control-lg {
   font-family: Bilbo;
   src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
 }
+header {
+  background-color: #222222;
+}
 header .navbar-custom .navbar-toggler-icon {
   background-image: url("../../assets/img/icons/menu-togler.svg");
 }
 header .navbar {
-  background-color: #222222;
+  margin: 0px 40px 0px 20px;
 }
-header .nav-item {
+header .navbar a.navbar-brand img {
+  min-width: 80px;
+  width: calc(15vw);
+  max-width: 100px;
+}
+header .navbar div.navbar-collapse {
+  justify-content: flex-end;
+}
+header .navbar div.navbar-collapse .navbar-nav li.nav-item {
   text-align: center;
 }
-header .navbar-brand {
-  height: 100px;
-  margin: 10px 40px;
-}
-header .navbar-brand img {
-  height: 100%;
-}
-header .navbar-light .navbar-nav .nav-link {
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link {
   color: #FFFBF6;
+  text-transform: uppercase;
+  font-size: 1rem;
 }
-header .navbar-light .navbar-nav .nav-link.active {
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link.active {
   color: #FB9614;
 }
-header .navbar-light .navbar-nav .nav-link:hover {
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link:hover {
   color: #FB9614;
+}
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link.nav-link-contact {
+  margin: 0px 20px;
+  border: 1px solid;
+  border-radius: 30px;
+}
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link.nav-link-contact.active {
+  background-color: #FB9614;
+  color: white;
+  border-color: #FB9614;
+}
+header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link.nav-link-contact:hover {
+  background-color: #FB9614;
+  color: white;
+  border-color: #FB9614;
 }
 
 footer {
+  margin-top: 40px;
   background-color: #222222;
 }
 footer .container {

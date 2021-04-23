@@ -3,43 +3,70 @@
 
 
 header {
+    background-color: $primary;
+
     .navbar-custom .navbar-toggler-icon {
         background-image: url("../../assets/img/icons/menu-togler.svg");
     }
 
     .navbar {
-        background-color: $primary;
-    }
-
-    .nav-item {
-        text-align: center;
-
-    }
-
-    .navbar-brand {
-        height: 100px;
-        margin: 10px 40px;
-
-        img {
-            height: 100%;
+       margin: 0px 40px 0px 20px;
+        a.navbar-brand {
+            img {
+                min-width: 80px;
+                width: calc(15vw);
+                max-width: 100px;
+            }
         }
-    }
-    .navbar-light .navbar-nav .nav-link {
-        &.active {
-            color: $secondary;
+
+        div.navbar-collapse {
+            justify-content:flex-end;
+            .navbar-nav {
+               li.nav-item {
+                text-align: center;
+                   a.nav-link {
+                    color: $light;
+                    text-transform: uppercase;
+                    font-size: $h6-font-size;
+                    &.active {
+                        color: $secondary;
+                    }
+                    &:hover {
+                        color: $secondary;
+                    }
+
+                    &.nav-link-contact {
+                        margin: 0px 20px;
+                        border: 1px solid;
+                        border-radius: 30px;
+
+
+                        &.active {
+                            background-color: $secondary;
+                            color: white;
+                            border-color: $secondary;
+                        }
+                        &:hover {
+                            background-color: $secondary;
+                            color: white;
+                            border-color: $secondary;
+                        }
+                    }
+                    
+                   }
+               }
+            }
         }
-        color: $light;
+
     }
 
-    .navbar-light .navbar-nav .nav-link:hover {
-        color: $secondary;
-    }
 
 }
 
 
 
 footer {
+    margin-top: 40px;
     background-color: $primary;
     .container {
         padding-top: 10px ;

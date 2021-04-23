@@ -3,352 +3,350 @@
 
 body {
 
+    .container {
 
-    .row.map-section {
+        &>.row:not(.row-1) {
+            margin-top: 40px;
+        }
 
-        margin-top: 40px;
-        .col {
-            display        : flex;
-            flex-direction : column;
-            
-            #google-maps-container {
+        //Main greeating section
+        .row.row-1 {
+            height    : 100%;
+            min-height: 750px;
+            max-height: 1200px;
+
+            .background {
+                position           : absolute;
+                left               : 0px;
+                background-image   : url("../img/main_background.jpg");
+                background-repeat  : no-repeat;
+                background-size    : cover;
+                background-position: center;
+                min-height         : 750px;
+                max-height         : 1200px;
+                width              : 100%;
+                z-index            : -1;
+            }
+
+            .col {
                 height: 100%;
-                width: 100%;
-                iframe {
-                    width: 100%;
+
+                .row {
+                    .title {
+
+                        display        : flex;
+                        flex-direction : column;
+                        justify-content: center;
+                        align-items    : center;
+                        padding        : 0px;
+                        margin-top     : 20px;
+
+                        h1 {
+                            font-weight: normal;
+                        }
+
+                        .title_decoration {
+                            background-image   : url("../../assets/img/icons/decoration.svg");
+                            background-repeat  : no-repeat;
+                            background-position: center;
+                            background-size    : contain;
+
+                            height: 50px;
+                            width : 95%;
+
+                        }
+
+                        .title-quote {
+                            color     : $light;
+                            padding   : 20px 10px;
+                            text-align: center;
+                        }
+
+                    }
+
+                }
+
+                .row.form-row {
+                    display        : flex;
+                    justify-content: center;
+
+                    input {
+                        height: 55px;
+                    }
+
+                    button {
+                        height: 45px;
+
+                    }
                 }
             }
         }
-    }
-
-    --main-bg-color:700px;
-
-    .background {
-        position           : absolute;
-        background-image   : url("../img/main_background.jpg");
-        background-repeat  : no-repeat;
-        background-size    : cover;
-        background-position: center;
-        width              : 100%;
-        height             : var(--main-bg-color);
-        z-index            : -1;
-    }
-
-    &>.container.container-fluid>.row:first-child {
-        height: var(--main-bg-color);
-    }
-
-    .form-row {
-        display        : flex;
-        justify-content: center;
-
-        input {
-            height: 55px;
-        }
-
-        button {
-            height: 45px;
-
-        }
-    }
 
 
-    @media only screen and (max-width: 700px) {
-        --main-bg-color: 700px;
+        //Services section
+        .row.services {
+            .col {
+                display       : flex;
+                flex-direction: column;
 
-    }
+                .nav {
+                    width           : 100%;
+                    background-color: $primary;
+                    display         : flex;
 
-    @media only screen and (max-width: 500px) {
-        --main-bg-color: 700px;
+                    .nav-item {
+                        //fits elements in one line
+                        width : 25%;
+                        height: 100%;
 
-    }
+                        button.nav-link {
+                            color : $light;
+                            height: 100%;
+
+                            display       : flex;
+                            flex-direction: column;
+
+                            @media only screen and (min-width: 840px) {
+                                flex-direction : row;
+                                justify-content: space-around;
+
+                                span {
+                                    padding-top   : 5px;
+                                    padding-bottom: 5px;
+                                    line-height   : 15px;
+                                    font-size     : $font-size-lg;
+                                }
+
+                            }
+
+                            padding-top : 15px;
+                            align-items : center;
 
 
+                            span {
+                                padding-top   : 5px;
+                                padding-bottom: 5px;
+                                line-height   : 15px;
+                            }
 
-    .title {
+                            &.active {
+                                color              : $secondary;
+                                border             : 2px solid $secondary;
+                                border-radius      : 0px;
+                                border-top-style   : none;
+                                border-right-style : none;
+                                border-left-style  : none;
+                                border-bottom-style: solid;
+                            }
 
-        display        : flex;
-        flex-direction : column;
-        justify-content: center;
-        align-items    : center;
-        padding        : 0px;
-        margin-top     : 20px;
+                            i {
+                                background-repeat: no-repeat;
+                                background-size  : 100%;
+                                width            : 30px;
+                                height           : 30px;
+                                display          : block;
 
-        h1 {
-            font-weight: normal;
-        }
+                            }
 
-        .title_decoration {
-            background-image   : url("../../assets/img/icons/decoration.svg");
-            background-repeat  : no-repeat;
-            background-position: center;
-            background-size    : contain;
+                            .interior-icon {}
 
-            height: 50px;
-            width : 95%;
+                            .exterior-icon {}
 
-        }
 
-        .title-quote {
-            color     : $light;
-            padding   : 20px 10px;
-            text-align: center;
-        }
+                            .commercial-icon {}
 
-    }
 
-    //Services section
-    .row.services {
-        .col {
-            display       : flex;
-            flex-direction: column;
+                            .multi-family-icon {}
 
-            .nav {
-                width           : 100%;
-                background-color: $primary;
-                display         : flex;
-
-                .nav-item {
-                    //fits elements in one line
-                    width : 25%;
-                    height: 100%;
-
-                    .nav-link {
-                        color         : $light;
-                        height        : 100%;
-                        padding       : 0px;
-                        display       : flex;
-                        flex-direction: column;
-                        align-items   : center;
-                        padding-top   : 15px;
-
-                        span {
-                            padding-top   : 5px;
-                            padding-bottom: 5px;
-                            line-height   : 15px;
                         }
+                    }
+
+                }
+
+                .tab-content {
+                    box-shadow: $box-shadow;
+
+                    .tab-pane {
+                        padding-top: 15px;
 
                         &.active {
-                            color              : $secondary;
-                            border             : 2px solid $secondary;
-                            border-radius      : 0px;
-                            border-top-style   : none;
-                            border-right-style : none;
-                            border-left-style  : none;
-                            border-bottom-style: solid;
-                        }
+                            display: flex;
 
-                        i {
-                            background-repeat: no-repeat;
-                            background-size  : 100%;
-                            width            : 30px;
-                            height           : 30px;
-                            display          : block;
 
                         }
 
-                        .interior-icon {}
+                        .description {
+                            padding: 0px 40px 20px 40px;
+                            width  : 100%;
+                        }
 
-                        .exterior-icon {}
+                        .carousel {
+                            width     : 90%;
+                            max-width : 500px;
+                            box-shadow: $box-shadow;
+                            margin    : 20px 40px;
+                            align-self: center;
 
-
-                        .commercial-icon {}
-
-
-                        .multi-family-icon {}
-
+                        }
                     }
+
                 }
 
-            }
-
-            .tab-content {
-                box-shadow: $box-shadow;
-
-                .tab-pane {
-                    padding-top: 15px;
-
-                    &.active {
-                        display: flex;
 
 
-                    }
 
-                    .description {
-                        padding: 0px 40px 20px 40px;
-                        width  : 100%;
-                    }
-
-                    .carousel {
-                        width     : 90%;
-                        max-width : 500px;
-                        box-shadow: $box-shadow;
-                        margin    : 20px 40px;
-                        align-self: center;
-
-                    }
-                }
 
             }
-
-
-
-
-
         }
-    }
 
 
+        //Licenses section. Some classes written in home.js class.
+        .row.licenses {
 
-    .row.licenses {
-        .col {
-            display       : flex;
-            flex-direction: column;
+            .license-icon {
+                background-image: url("../img/icons/licese.svg");
+            }
 
-            .nav {
-                width           : 100%;
-                background-color: $primary;
-                display         : flex;
+            .active .license-icon {
+                background-image: url("../img/icons/licese-yelow.svg");
+            }
 
-                .nav-item {
-                    //fits elements in one line
-                    width : 25%;
-                    height: 100%;
+            .col {
+                display       : flex;
+                flex-direction: column;
 
-                    .nav-link {
-                        color         : $light;
-                        height        : 100%;
-                        padding       : 0px;
-                        display       : flex;
-                        flex-direction: column;
-                        align-items   : center;
-                        padding-top   : 15px;
+                .my-card-header {
+                    display         : flex;
+                    justify-content : center;
+                    align-items     : center;
+                    height          : 60px;
+                    background-color: $primary;
+                    color           : $light;
 
-                        span {
-                            padding-top   : 5px;
-                            padding-bottom: 5px;
-                            line-height   : 15px;
+                    * {
+                        margin: 0 10px;
+                    }
+
+                    i {
+                        width : 40px;
+                        height: 40px;
+                        color : red;
+                    }
+
+                    span {
+                        font-size: $h5-font-size;
+                    }
+                }
+
+                .my-card-body {
+                    display         : flex;
+                    flex-direction  : column;
+                    justify-content : space-between;
+                    align-items     : center;
+                    height          : 100%;
+                    padding         : 20px;
+                    background-color: $white;
+                    box-shadow      : $box-shadow;
+
+                    .image-container {
+                        img {
+                            width: 100%;
                         }
+                    }
+                }
+
+                .nav {
+                    width           : 100%;
+                    background-color: $primary;
+                    display         : flex;
+
+                    .nav-item {
+                        //fits elements in one line
+                        width : 25%;
+                        height: 100%;
+
+                        .nav-link {
+                            color         : $light;
+                            height        : 100%;
+                            padding       : 0px;
+                            display       : flex;
+                            flex-direction: column;
+                            align-items   : center;
+                            padding-top   : 15px;
+                            span {
+                                padding-top   : 5px;
+                                padding-bottom: 5px;
+                                line-height   : 15px;
+                            }
+
+                            &.active {
+                                color              : $secondary;
+                                border             : 2px solid $secondary;
+                                border-radius      : 0px;
+                                border-top-style   : none;
+                                border-right-style : none;
+                                border-left-style  : none;
+                                border-bottom-style: solid;
+                            }
+
+                            i {
+                                background-repeat: no-repeat;
+                                background-size  : 100%;
+                                width            : 30px;
+                                height           : 30px;
+                                display          : block;
+
+                            }
+
+                            .interior-icon {}
+                            .exterior-icon {}
+                            .commercial-icon {}
+                            .multi-family-icon {}
+
+                        }
+                    }
+                }
+
+                .tab-content {
+                    box-shadow: $box-shadow;
+
+                    .tab-pane {
+                        padding-top: 15px;
 
                         &.active {
-                            color              : $secondary;
-                            border             : 2px solid $secondary;
-                            border-radius      : 0px;
-                            border-top-style   : none;
-                            border-right-style : none;
-                            border-left-style  : none;
-                            border-bottom-style: solid;
+                            display       : flex;
+                            flex-direction: column;
                         }
 
-                        i {
-                            background-repeat: no-repeat;
-                            background-size  : 100%;
-                            width            : 30px;
-                            height           : 30px;
-                            display          : block;
-
+                        .description {
+                            padding: 0px 40px 20px 40px;
                         }
 
-                        .interior-icon {}
-
-                        .exterior-icon {}
-
-
-                        .commercial-icon {}
-
-
-                        .multi-family-icon {}
-
+                        .carousel {
+                            width     : 90%;
+                            box-shadow: $box-shadow;
+                            margin    : auto;
+                        }
                     }
+
                 }
-
             }
-
-            .tab-content {
-                box-shadow: $box-shadow;
-
-                .tab-pane {
-                    padding-top: 15px;
-
-                    &.active {
-                        display       : flex;
-                        flex-direction: column;
-                    }
-
-                    .description {
-                        padding: 0px 40px 20px 40px;
-                    }
-
-                    .carousel {
-                        width     : 90%;
-                        box-shadow: $box-shadow;
-                        margin    : auto;
-                    }
-                }
-
-            }
-
-
-
-
-
         }
-    }
 
-    .licenses {
-        .col {
-            .my-card-header {
-                display         : flex;
-                justify-content : center;
-                align-items     : center;
-                height          : 60px;
-                background-color: $primary;
-                color           : $light;
+        .row.map-section {
+            margin-top: 40px;
+            .col {
+                display       : flex;
+                flex-direction: column;
+                #google-maps-container {
+                    height: 100%;
+                    width : 100%;
 
-                * {
-                    margin: 0 10px;
-                }
-
-                i {
-                    width : 40px;
-                    height: 40px;
-                    color : red;
-                }
-
-                span {
-                    font-size: $h5-font-size;
-                }
-
-            }
-
-            .my-card-body {
-                display         : flex;
-                flex-direction  : column;
-                justify-content : space-between;
-                align-items     : center;
-                height          : 100%;
-                padding         : 20px;
-                background-color: $white;
-                box-shadow      : $box-shadow;
-
-                .image-container {
-                    img {
+                    iframe {
                         width: 100%;
                     }
                 }
             }
-
         }
-
-        .license-icon {
-            background-image: url("../img/icons/licese.svg");
-        }
-
-        .active .license-icon {
-            background-image: url("../img/icons/licese-yelow.svg");
-        }
-
-
     }
-
 }
