@@ -121,19 +121,35 @@ body {
         z-index: 10000;
         background-color: rgb(0,0,0); /* Fallback color */
         background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+ 
         img {
             margin: auto;
-            width: 80%;
-            max-height: 90%;
-            @media screen {
-                
+            width: auto;
+            max-height: auto;
+            max-height: 100%;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+               position: absolute;
+               z-index: -1;
+               top: 50%;
+               transform: translateY(-50%);
             }
         }
         button {
-            height: 40px;
+            
             margin: auto;
+            position: absolute;
             color: $secondary;
-            font-size: 20px;
+            font-size: 30px;
+            &.left {
+                left:40px;
+                top: 45%;
+            }
+
+            &.right {
+                right: 40px;
+                top: 45%;
+            }
             &.close {
                 position: absolute;
                 top: 50px;
@@ -141,6 +157,21 @@ body {
                 height: 40px;
                 width: 40px;
                 margin: 0px 0px;
+            }
+
+            @media only screen and (max-width: 600px) {
+                &.left {
+                    left:0px;
+
+                }
+    
+                &.right {
+                    right: 0px;
+
+                }
+                &.close {
+                    right: 10px;
+                }
             }
         }
 

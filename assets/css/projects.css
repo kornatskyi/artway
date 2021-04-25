@@ -92,14 +92,32 @@ body .img-view {
 }
 body .img-view img {
   margin: auto;
-  width: 80%;
-  max-height: 90%;
+  width: auto;
+  max-height: auto;
+  max-height: 100%;
+}
+@media only screen and (max-width: 600px) {
+  body .img-view img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 body .img-view button {
-  height: 40px;
   margin: auto;
+  position: absolute;
   color: #FB9614;
-  font-size: 20px;
+  font-size: 30px;
+}
+body .img-view button.left {
+  left: 40px;
+  top: 45%;
+}
+body .img-view button.right {
+  right: 40px;
+  top: 45%;
 }
 body .img-view button.close {
   position: absolute;
@@ -108,6 +126,17 @@ body .img-view button.close {
   height: 40px;
   width: 40px;
   margin: 0px 0px;
+}
+@media only screen and (max-width: 600px) {
+  body .img-view button.left {
+    left: 0px;
+  }
+  body .img-view button.right {
+    right: 0px;
+  }
+  body .img-view button.close {
+    right: 10px;
+  }
 }
 
 /*# sourceMappingURL=projects.css.map */
