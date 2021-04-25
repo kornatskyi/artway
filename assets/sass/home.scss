@@ -6,7 +6,16 @@ body {
     .container {
 
         &>.row:not(.row-1) {
+           
+
             margin-top: 40px;
+            h2.section-title {
+               
+               
+                // background-color: $primary;
+                // color: white;
+            
+            }
         }
 
         //Main greeating section
@@ -83,6 +92,17 @@ body {
         }
 
 
+        //About Us section
+        .row.about {
+            
+            .col {
+                .content {
+                    padding: 20px;
+
+                    border: 1px solid $secondary;
+                }
+            }
+        }
         //Services section
         .row.services {
             .col {
@@ -165,7 +185,8 @@ body {
 
                 .tab-content {
                     box-shadow: $box-shadow;
-
+                    padding: 20px;
+                    
                     .tab-pane {
                         padding-top: 15px;
 

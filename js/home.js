@@ -27,7 +27,7 @@ const licensesDisplayFunc = () => {
 if(window.innerWidth < 900) {
     licensesContainer.innerHTML = `
     <div class="col">
-      <h2 class="">We are licensed and inssured</h2>
+      <h2 class="section-title">We are licensed and inssured</h2>
       <ul
         class="nav nav-pills nav-fill"
         id="pills-tab-licenses"
@@ -141,7 +141,7 @@ if(window.innerWidth < 900) {
   `;
 } else {
     licensesContainer.innerHTML = `
-    <h2 class="">We are licensed and inssured</h2>
+    <h2 class="section-title">We are licensed and inssured</h2>
     <div class="col">
       <div class="my-card-header">
         <i class="license-icon"></i>
