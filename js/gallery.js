@@ -48,12 +48,40 @@ const fillFrame = (name, date, description, imageLinks) => {
 };
 
 
+document.querySelector(".img-view>.close").addEventListener("click", () => {
+    document.querySelector(".img-view").style.display = "none";
+})
+
 class Project {
-    constructor(name, date, description,  imageLinks) {
+    constructor(name, date, description, imageLinks) {
         this.imageLinks = imageLinks;
         this.imgElements = imageLinks.map(link => {
             let element = document.createElement('img');
             element.setAttribute('src', link);
+            element.addEventListener('click', (e) => {
+                let counter = this.imgElements.indexOf(element);
+                console.log(counter);
+                console.log(e.target);
+                document.querySelector(".img-view>img").src = element.src;
+                document.querySelector(".img-view").style.display = "flex";
+                document.querySelector(".img-view>.left").addEventListener('click', () => {
+
+                    if (counter === 0) {
+                        counter = this.imgElements.length;
+                    }
+                    counter--;
+                    document.querySelector(".img-view>img").src = this.imgElements[counter].src;
+
+                });
+                document.querySelector(".img-view>.right").addEventListener('click', () => {
+                    counter++;
+                    if (counter >= this.imgElements.length) {
+                        counter = 0;
+                    }
+                    document.querySelector(".img-view>img").src = this.imgElements[counter].src;
+
+                });;
+            })
             return element;
         });
 
@@ -68,22 +96,16 @@ class Project {
                                     </div>
                                     <div class="gallery">
                                         <div class=" first">
-                                       ${this.imgElements[0].outerHTML}
                                     </div>
                                     <div class=" second-1">
-                                    ${this.imgElements[1].outerHTML}
                                     </div>
                                     <div class=" second-2">
-                                        ${this.imgElements[2].outerHTML}
                                     </div>
                                     <div class=" third-1">
-                                        ${this.imgElements[3].outerHTML}
                                     </div>
                                     <div class=" third-2">
-                                        ${this.imgElements[4].outerHTML}
                                     </div>
                                     <div class=" third-3">
-                                        ${this.imgElements[5].outerHTML}
                                     </div> 
                                     </div>
                                     <div class="ptoroject-footer">
@@ -91,7 +113,7 @@ class Project {
                                             <p>${this.description}</p>
                                         </div>
                                     </div>`;
-
+        this.htmlComponent.querySelectorAll(".gallery>div").forEach((div, index) => div.appendChild(this.imgElements[index]));
         this.appendTo(document.querySelector("#my-container"));
     }
 
@@ -99,10 +121,15 @@ class Project {
         parent.appendChild(this.htmlComponent)
     }
 
-    
+    slider() {
+
+    }
+
+
 }
 
 let projects = [];
+
 
 
 
@@ -117,13 +144,13 @@ let projects = [];
  */
 const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProjects) {
     let data = [];
-     await fetch(linkToTheGllery, {
+    await fetch(linkToTheGllery, {
         headers: {
             "Content-Type": "text/html",
             Accept: "text/html",
         },
     }).then(response => {
-        
+
         if (!response.ok) {
             throw Error(response.statusText);
         }
@@ -133,7 +160,7 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
         galleryHTML.innerHTML = galleryHTMLString;
 
         galleryHTML.querySelector("#files").childElementCount;
-         for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
+        for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
             await fetch(`http://192.168.0.9:5500/assets/img/gallery/project-${i}`, {
                 headers: {
                     "Content-Type": "text/html",
@@ -141,7 +168,7 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
                 },
             })
                 .then((response) => {
-                    
+
 
                     if (!response.ok) {
                         throw Error(response.statusText);
@@ -155,7 +182,7 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
                     let infoAnchorn;
                     //Container for HTML. By whitch you can get acces to its components
                     htmlContainer.innerHTML = htmlString;
-              
+
                     //Get NodeList of <a> elements that link to images in requested directory. And convert in to Array.
                     imagesAnchorns = Array.from(
                         htmlContainer.querySelectorAll(".icon-image")
@@ -164,7 +191,7 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
                     imagesPaths = imagesAnchorns.map((imgA) => imgA.getAttribute("href"));
                     //Get an <a> element that links to json file with project info
                     infoAnchorn = htmlContainer.querySelector(".icon-application-json");
-                   
+
                     await fetch(infoAnchorn, {
                         headers: {
                             "Content-Type": "application/json"

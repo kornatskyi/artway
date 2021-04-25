@@ -27,10 +27,16 @@ body {
 
                 
                                 img {
+                                    
                                     width     : 100%;
                                     height    : 100%;
                                     object-fit: cover;
                                     cursor: pointer;
+                                    &:hover {
+                                        opacity: 0.7;
+                                        
+                                    }
+                                  
 
                                 }
                             }
@@ -102,4 +108,44 @@ body {
             }
         }
     }
+
+
+    .img-view {
+        // display: none; /* Hidden by default */
+        display: none;
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: 10000;
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        img {
+            margin: auto;
+            width: 80%;
+            max-height: 90%;
+            @media screen {
+                
+            }
+        }
+        button {
+            height: 40px;
+            margin: auto;
+            color: $secondary;
+            font-size: 20px;
+            &.close {
+                position: absolute;
+                top: 50px;
+                right: 50px;
+                height: 40px;
+                width: 40px;
+                margin: 0px 0px;
+            }
+        }
+
+        
+
+    }
+
 }
