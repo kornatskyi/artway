@@ -65,6 +65,7 @@ body .container .row.row-1 .col .row.form-row button {
 }
 body .container .row.about .col .content {
   padding: 20px;
+  background-color: rgba(251, 150, 20, 0.1);
   border: 1px solid #FB9614;
 }
 body .container .row.services .col {
@@ -173,10 +174,10 @@ body .container .row.services .col .tab-content .tab-pane #carouselInterior .car
   background-image: url("../img/services/interior/interior2.jpeg");
 }
 body .container .row.services .col .tab-content .tab-pane #carouselExterior .carousel-inner .one {
-  background-image: url("../img/services/exterior/exterior1.jpg");
+  background-image: url("../img/services/exterior/exterior1.jpeg");
 }
 body .container .row.services .col .tab-content .tab-pane #carouselExterior .carousel-inner .two {
-  background-image: url("../img/services/exterior/exterior2.jpeg");
+  background-image: url("../img/services/exterior/exterior2.jpg");
 }
 body .container .row.services .col .tab-content .tab-pane #carouselCommercial .carousel-inner .one {
   background-image: url("../img/services/commercial/commercial1.jpg");
@@ -199,6 +200,9 @@ body .container .row.licenses .active .license-icon {
 body .container .row.licenses .col {
   display: flex;
   flex-direction: column;
+}
+body .container .row.licenses .col .tab-content .tab-pane {
+  background-color: rgba(251, 150, 20, 0.1);
 }
 body .container .row.licenses .col .my-card-header {
   display: flex;
@@ -227,10 +231,16 @@ body .container .row.licenses .col .my-card-body {
   height: 100%;
   padding: 20px;
   background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: 1px solid #FB9614;
+  background-color: rgba(251, 150, 20, 0.1);
 }
-body .container .row.licenses .col .my-card-body .image-container img {
-  width: 100%;
+body .container .row.licenses .col .image-container {
+  display: flex;
+}
+body .container .row.licenses .col .image-container img {
+  margin: auto;
+  width: auto;
+  max-height: 180px;
 }
 body .container .row.licenses .col .nav {
   width: 100%;
@@ -291,19 +301,26 @@ body .container .row.licenses .col .tab-content .tab-pane .carousel {
 }
 body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container {
   display: flex;
+  padding: 10px;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container {
     flex-direction: column;
   }
 }
 body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container .review-container {
+  background-color: rgba(251, 150, 20, 0.1);
+  padding-bottom: 5px;
+  margin: 10px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  width: 50%;
   border: 1px solid #FB9614;
-  margin: 10px;
-  padding: 10px;
+}
+@media only screen and (max-width: 830px) {
+  body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container .review-container {
+    width: 100%;
+  }
 }
 body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container .review-container .review-header {
   display: flex;
@@ -329,6 +346,9 @@ body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-it
 body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container .review-container .review-body {
   padding-left: 10px;
 }
+body .container .row.reviews .col .reviews-carousel .carousel-inner .carousel-item .item-container .review-container .review-body .text {
+  font-size: 0.875rem;
+}
 body .container .row.reviews .col .reviews-carousel .carousel-indicators {
   position: relative;
   margin: 0;
@@ -346,6 +366,7 @@ body .container .row.map-section .col {
 body .container .row.map-section .col #google-maps-container {
   height: 100%;
   width: 100%;
+  border: 1px solid #FB9614;
 }
 body .container .row.map-section .col #google-maps-container iframe {
   width: 100%;

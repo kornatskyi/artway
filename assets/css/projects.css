@@ -17,6 +17,9 @@ body .container .row .col .my-container {
 }
 body .container .row .col .my-container .project {
   max-width: 1000px;
+  background-color: rgba(251, 150, 20, 0.1);
+  padding: 20px;
+  margin-bottom: 30px;
 }
 body .container .row .col .my-container .project .gallery {
   max-width: 1000px;
@@ -27,6 +30,7 @@ body .container .row .col .my-container .project .gallery {
   grid-gap: 15px;
 }
 body .container .row .col .my-container .project .gallery div img {
+  border: 1px solid #FB9614;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -76,6 +80,9 @@ body .container .row .col .my-container .project .gallery .third-3 {
   grid-column-end: 7;
   grid-row-start: 6;
   grid-row-end: 9;
+}
+body .container .row .col .my-container .project .project-footer {
+  margin-top: 15px;
 }
 body .img-view {
   display: none;

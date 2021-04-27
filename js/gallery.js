@@ -40,7 +40,7 @@ const fillFrame = (name, date, description, imageLinks) => {
           
 
             </div>
-          <div class="ptoroject-footer">
+          <div class="project-footer">
               <div class="description">
                   <p>${description}</p>
               </div>
@@ -118,7 +118,7 @@ class Project {
                                     <div class=" third-3">
                                     </div> 
                                     </div>
-                                    <div class="ptoroject-footer">
+                                    <div class="project-footer">
                                         <div class="description">
                                             <p>${this.description}</p>
                                         </div>

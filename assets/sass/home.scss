@@ -99,6 +99,7 @@ body {
             .col {
                 .content {
                     padding: 20px;
+                    background-color: rgba($secondary, $alpha: 0.1);
 
                     border: 1px solid $secondary;
                 }
@@ -273,11 +274,11 @@ body {
                         #carouselExterior {
                             .carousel-inner {
                                 .one {
-                                    background-image: url("../img/services/exterior/exterior1.jpg");
+                                    background-image: url("../img/services/exterior/exterior1.jpeg");
                                 }
 
                                 .two {
-                                    background-image: url("../img/services/exterior/exterior2.jpeg");
+                                    background-image: url("../img/services/exterior/exterior2.jpg");
                                 }
                             }
                         }
@@ -331,7 +332,12 @@ body {
             .col {
                 display       : flex;
                 flex-direction: column;
+                .tab-content {
+                    .tab-pane{ 
 
+                        background-color: rgba($secondary, $alpha: 0.1);
+                    }
+                }
                 .my-card-header {
                     display         : flex;
                     justify-content : center;
@@ -363,15 +369,24 @@ body {
                     height          : 100%;
                     padding         : 20px;
                     background-color: $white;
-                    box-shadow      : $box-shadow;
+                    // box-shadow      : $box-shadow;
+                    border: 1px solid $secondary;
 
-                    .image-container {
-                        img {
-                            width: 100%;
-                        }
-                    }
+                    background-color: rgba($secondary, $alpha: 0.1);
+
+                   
                 }
 
+                .image-container {
+                    display: flex;
+                  
+                    img {
+                        margin: auto;
+                        width: auto;
+                        max-height: 180px;
+                        
+                    }
+                }
                 .nav {
                     width           : 100%;
                     background-color: $primary;
@@ -462,21 +477,26 @@ body {
                             .item-container {
                                 display: flex;
 
-                                @media only screen and (max-width: 600px) {
+                                @media only screen and (max-width: 800px) {
                                     flex-direction: column;
 
 
                                 }
+                                padding: 10px;
 
                                 .review-container {
-
-
+                                    background-color: rgba($secondary, $alpha: 0.1);
+                                    padding-bottom: 5px;
+                                    margin: 10px;
                                     display       : flex;
                                     flex-direction: column;
-                                    flex-grow     : 1;
+                                    width: 50%;
                                     border        : 1px solid $secondary;
-                                    margin        : 10px;
-                                    padding       : 10px;
+                                   
+                                    @media only screen and (max-width: 830px) {
+                                        width: 100%;
+                                        
+                                    }
 
                                     .review-header {
                                         display: flex;
@@ -497,6 +517,7 @@ body {
                                             .name {
                                                 font-weight: $font-weight-bold;
                                             }
+                                          
 
                                             .stars {
                                                 color    : $secondary;
@@ -508,7 +529,9 @@ body {
 
                                     .review-body {
                                         padding-left: 10px;
-
+                                        .text {
+                                            font-size: $font-size-sm;
+                                        }
 
 
                                     }
@@ -536,6 +559,7 @@ body {
 
         .row.map-section {
             margin-top: 40px;
+            
 
             .col {
                 display       : flex;
@@ -544,8 +568,10 @@ body {
                 #google-maps-container {
                     height: 100%;
                     width : 100%;
+                    border: 1px solid $secondary;
 
                     iframe {
+                        
                         width: 100%;
                     }
                 }

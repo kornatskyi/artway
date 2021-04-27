@@ -96,10 +96,10 @@ if(window.innerWidth < 900) {
             status for Artway Construction at the Washington State
             Department of Labor & Industries.
           </div>
-          <div class="d-flex">
+          <div class="d-flex image-container">
             <img
               class="m-auto"
-              src="assets/img/licensed-trenspa.png"
+              src="assets/img/licenses/license.png"
               alt=""
             />
           </div>
@@ -114,8 +114,8 @@ if(window.innerWidth < 900) {
             <h5>INSURED</h5>
             Insurer Ohio Security Ins Co Insured up to $1,000,000
           </div>
-          <div class="d-flex">
-            <img class="m-auto" src="assets/img/insured-300px.png" alt="" />
+          <div class="d-flex image-container">
+            <img class="m-auto" src="assets/img/licenses/insurance.png" alt="" />
           </div>
         </div>
         <div
@@ -128,10 +128,10 @@ if(window.innerWidth < 900) {
             <h5>BONDED</h5>
             Bonded Agent Philadelphia Indemnity Ins Co Bond Value $6,000
           </div>
-          <div class="d-flex">
+          <div class="d-flex image-container">
             <img
               class="m-auto"
-              src="assets/img/bounded-300x300.png.png"
+              src="assets/img/licenses/bound.png"
               alt=""
             />
           </div>
@@ -160,7 +160,7 @@ if(window.innerWidth < 900) {
           Labor & Industries.
         </div>
         <div class="image-container">
-          <img class="m-auto" src="assets/img/licensed-trenspa.png" alt="" />
+          <img class="m-auto" src="assets/img/licenses/license.png" alt="" />
         </div>
       </div>
     </div>
@@ -176,7 +176,7 @@ if(window.innerWidth < 900) {
           Insurer Ohio Security Ins Co Insured up to $1,000,000
         </div>
         <div class="image-container">
-          <img class="" src="assets/img/insured-300px.png" alt="" />
+          <img class="" src="assets/img/licenses/insurance.png" alt="" />
         </div>
       </div>
     </div>
@@ -192,7 +192,7 @@ if(window.innerWidth < 900) {
           Bonded Agent Philadelphia Indemnity Ins Co Bond Value $6,000
         </div>
         <div class="image-container">
-          <img class="" src="assets/img/bounded-300x300.png.png" alt="" />
+          <img class="" src="assets/img/licenses/bound.png" alt="" />
         </div>
       </div>
     </div>`;

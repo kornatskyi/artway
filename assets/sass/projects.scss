@@ -16,6 +16,9 @@ body {
                 
                     .project {
                             max-width: 1000px;
+                            background-color: rgba($secondary, $alpha: 0.1);
+                            padding: 20px;
+                            margin-bottom: 30px;
                 
                         .gallery {
                             max-width : 1000px;
@@ -27,6 +30,8 @@ body {
 
                 
                                 img {
+                                    
+                                    border: 1px solid $secondary;
                                     
                                     width     : 100%;
                                     height    : 100%;
@@ -102,6 +107,9 @@ body {
                             }
                         }
                 
+                        .project-footer {
+                            margin-top: 15px;
+                        }
                     }
                 
                 }
