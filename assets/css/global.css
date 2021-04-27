@@ -27,7 +27,7 @@ header .navbar div.navbar-collapse .navbar-nav li.nav-item {
   text-align: center;
 }
 header .navbar div.navbar-collapse .navbar-nav li.nav-item a.nav-link {
-  color: #FFFBF6;
+  color: #ffffff;
   text-transform: uppercase;
   font-size: 1rem;
 }
@@ -65,7 +65,7 @@ footer .container div ul li a:hover {
   color: #FB9614;
 }
 footer .container div a {
-  color: #FFFBF6;
+  color: #ffffff;
 }
 footer .container div a:hover {
   color: #FB9614;
@@ -74,7 +74,7 @@ footer .container div a i:hover {
   color: #FB9614;
 }
 footer * {
-  color: #FFFBF6;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=global.css.map */

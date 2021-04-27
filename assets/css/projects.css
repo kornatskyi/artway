@@ -7,7 +7,7 @@
   src: url(../fonts/Bilbo/Bilbo-Regular.ttf);
 }
 body {
-  background-color: #FFFBF6;
+  background-color: #ffffff;
 }
 body .container .row .col .my-container {
   display: flex;

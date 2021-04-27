@@ -6,15 +6,16 @@ body {
     .container {
 
         &>.row:not(.row-1) {
-           
+
 
             margin-top: 40px;
+
             h2.section-title {
-               
-               
+
+
                 // background-color: $primary;
                 // color: white;
-            
+
             }
         }
 
@@ -94,7 +95,7 @@ body {
 
         //About Us section
         .row.about {
-            
+
             .col {
                 .content {
                     padding: 20px;
@@ -103,6 +104,7 @@ body {
                 }
             }
         }
+
         //Services section
         .row.services {
             .col {
@@ -185,8 +187,8 @@ body {
 
                 .tab-content {
                     box-shadow: $box-shadow;
-                    padding: 20px;
-                    
+                    padding   : 20px;
+
                     .tab-pane {
                         padding-top: 15px;
 
@@ -294,6 +296,7 @@ body {
                             flex-direction: column;
                             align-items   : center;
                             padding-top   : 15px;
+
                             span {
                                 padding-top   : 5px;
                                 padding-bottom: 5px;
@@ -320,8 +323,11 @@ body {
                             }
 
                             .interior-icon {}
+
                             .exterior-icon {}
+
                             .commercial-icon {}
+
                             .multi-family-icon {}
 
                         }
@@ -355,14 +361,86 @@ body {
         }
 
         .row.reviews {
-            
+            .col {
+                .reviews-carousel {
+                    .carousel-inner {
+                        .carousel-item {
+                            .item-container {
+                                display: flex;
+
+                                @media only screen and (max-width: 600px) {
+                                    flex-direction: column;
+
+                                    
+                                }
+
+                                .review-container {
+
+                                    
+                                    display: flex;
+                                    flex-direction: column;
+                                    flex-grow: 1;
+                                   border: 1px solid $secondary;
+                                   margin: 10px;
+                                   padding: 10px;
+                                    .review-header {
+                                        display: flex;
+                                        img {
+                                            border-radius: 50%;
+                                            margin: 15px ;
+                                            width: auto;
+                                            max-width: 90px;
+                                            height: auto;
+                                            max-height: 90px;
+                                           
+                                        }
+                                            div {
+                                                padding-top: 20px;
+                                                .name {
+                                                    font-weight: $font-weight-bold;
+                                                }
+        
+                                                .stars {
+                                                    color    : $secondary;
+                                                    font-size: $h2-font-size;
+                                                }
+                                            }
+                                    }
+    
+
+                                    .review-body {
+                                        padding-left: 10px;
+
+
+                                       
+                                    }
+
+                                }
+                            }
+                          
+                        }
+                    }
+                    .carousel-indicators    {
+                        position: relative;
+                        
+                        margin:0;
+                        & [data-bs-target] {
+                            background-color: $secondary;
+
+                        }
+                        
+                    }
+                }
+            }
         }
 
         .row.map-section {
             margin-top: 40px;
+
             .col {
                 display       : flex;
                 flex-direction: column;
+
                 #google-maps-container {
                     height: 100%;
                     width : 100%;

@@ -66,7 +66,7 @@ class Project {
             let element = document.createElement('img');
             element.setAttribute('src', link);
             element.addEventListener('click', (e) => {
-                 element.addEventListener('click', (e) => {
+                 
                 let counter = this.imgElements.indexOf(element);
                 console.log(counter);
                 console.log(e.target);
@@ -89,7 +89,7 @@ class Project {
                     document.querySelector(".img-view>img").src = this.imgElements[counter].src;
 
                 });;
-            })
+            
             })
          
             return element;
