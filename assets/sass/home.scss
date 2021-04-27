@@ -186,11 +186,13 @@ body {
                 }
 
                 .tab-content {
-                    box-shadow: $box-shadow;
-                    padding   : 20px;
+                    box-shadow   : $box-shadow;
+                    // padding   : 20px;
 
                     .tab-pane {
-                        padding-top: 15px;
+                        // padding-top: 15px;
+                        transition: opacity 0.2s linear;
+                        position: relative;
 
                         &.active {
                             display: flex;
@@ -199,17 +201,109 @@ body {
                         }
 
                         .description {
-                            padding: 0px 40px 20px 40px;
-                            width  : 100%;
+                            position: absolute;
+                            right   : 20px;
+                            height: max-content;
+                            bottom: 20px;
+                            display        : flex;
+                            justify-content: center;
+
+                            .description-container {
+                                position  : relative;
+                                background: rgba(4, 4, 4, 0.5);
+                                border    : 1px solid $secondary;
+                                margin-left: 20px;
+
+                                // margin-top: 100%;
+                                // transform: translate(-50%, -50%);
+                                // margin-left: 100%;
+
+                                color  : white;
+                                padding: 10px 40px 20px 40px;
+
+                                // @media only screen and (max-width: 840px) {
+                                //     width: 75%;
+
+                                // }
+                            }
+
+                            z-index: 100;
                         }
 
                         .carousel {
-                            width     : 90%;
-                            max-width : 500px;
-                            box-shadow: $box-shadow;
-                            margin    : 20px 40px;
-                            align-self: center;
+                            width      : 100%;
+                            height     : 100%;
+                            position   : relative;
+                            // position: relative;
 
+                            // max-width : 500px;
+                            box-shadow   : $box-shadow;
+                            // margin    : 20px 40px;
+                            align-self   : center;
+
+                            .carousel-inner {
+                                width : 100%;
+                                height: 100%;
+
+                                &>* {
+                                    height         : 500px;
+                                    background-size: contain;
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                    background-position: center bottom;
+                                }
+                            }
+
+
+
+                        }
+
+                        #carouselInterior {
+                            .carousel-inner {
+                                .one {
+                                    background-image: url("../img/services/interior/interior1.jpeg");
+                                }
+
+                                .two {
+                                    background-image: url("../img/services/interior/interior2.jpeg");
+                                }
+                            }
+                        }
+
+                        #carouselExterior {
+                            .carousel-inner {
+                                .one {
+                                    background-image: url("../img/services/exterior/exterior1.jpg");
+                                }
+
+                                .two {
+                                    background-image: url("../img/services/exterior/exterior2.jpeg");
+                                }
+                            }
+                        }
+
+                        #carouselCommercial {
+                            .carousel-inner {
+                                .one {
+                                    background-image: url("../img/services/commercial/commercial1.jpg");
+                                }
+
+                                .two {
+                                    background-image: url("../img/services/commercial/commercial2.jpg");
+                                }
+                            }
+                        }
+
+                        #carouselMulti {
+                            .carousel-inner {
+                                .one {
+                                    background-image: url("../img/services/multi-family/multi1.jpg");
+                                }
+
+                                .two {
+                                    background-image: url("../img/services/multi-family/multi2.jpg");
+                                }
+                            }
                         }
                     }
 
@@ -371,64 +465,70 @@ body {
                                 @media only screen and (max-width: 600px) {
                                     flex-direction: column;
 
-                                    
+
                                 }
 
                                 .review-container {
 
-                                    
-                                    display: flex;
+
+                                    display       : flex;
                                     flex-direction: column;
-                                    flex-grow: 1;
-                                   border: 1px solid $secondary;
-                                   margin: 10px;
-                                   padding: 10px;
+                                    flex-grow     : 1;
+                                    border        : 1px solid $secondary;
+                                    margin        : 10px;
+                                    padding       : 10px;
+
                                     .review-header {
                                         display: flex;
+
                                         img {
                                             border-radius: 50%;
-                                            margin: 15px ;
-                                            width: auto;
-                                            max-width: 90px;
-                                            height: auto;
-                                            max-height: 90px;
-                                           
+                                            margin       : 15px;
+                                            width        : auto;
+                                            max-width    : 90px;
+                                            height       : auto;
+                                            max-height   : 90px;
+
                                         }
-                                            div {
-                                                padding-top: 20px;
-                                                .name {
-                                                    font-weight: $font-weight-bold;
-                                                }
-        
-                                                .stars {
-                                                    color    : $secondary;
-                                                    font-size: $h2-font-size;
-                                                }
+
+                                        div {
+                                            padding-top: 20px;
+
+                                            .name {
+                                                font-weight: $font-weight-bold;
                                             }
+
+                                            .stars {
+                                                color    : $secondary;
+                                                font-size: $h2-font-size;
+                                            }
+                                        }
                                     }
-    
+
 
                                     .review-body {
                                         padding-left: 10px;
 
 
-                                       
+
                                     }
 
                                 }
                             }
-                          
+
                         }
                     }
-                    .carousel-indicators    {
+
+                    .carousel-indicators {
                         position: relative;
-                        
-                        margin:0;
+
+                        margin: 0;
+
                         & [data-bs-target] {
                             background-color: $secondary;
 
                         }
-                        
+
                     }
                 }
             }

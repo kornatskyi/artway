@@ -123,24 +123,72 @@ body .container .row.services .col .nav .nav-item button.nav-link i {
 }
 body .container .row.services .col .tab-content {
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
 }
 body .container .row.services .col .tab-content .tab-pane {
-  padding-top: 15px;
+  transition: opacity 0.2s linear;
+  position: relative;
 }
 body .container .row.services .col .tab-content .tab-pane.active {
   display: flex;
 }
 body .container .row.services .col .tab-content .tab-pane .description {
-  padding: 0px 40px 20px 40px;
-  width: 100%;
+  position: absolute;
+  right: 20px;
+  height: max-content;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+body .container .row.services .col .tab-content .tab-pane .description .description-container {
+  position: relative;
+  background: rgba(4, 4, 4, 0.5);
+  border: 1px solid #FB9614;
+  margin-left: 20px;
+  color: white;
+  padding: 10px 40px 20px 40px;
 }
 body .container .row.services .col .tab-content .tab-pane .carousel {
-  width: 90%;
-  max-width: 500px;
+  width: 100%;
+  height: 100%;
+  position: relative;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  margin: 20px 40px;
   align-self: center;
+}
+body .container .row.services .col .tab-content .tab-pane .carousel .carousel-inner {
+  width: 100%;
+  height: 100%;
+}
+body .container .row.services .col .tab-content .tab-pane .carousel .carousel-inner > * {
+  height: 500px;
+  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+body .container .row.services .col .tab-content .tab-pane #carouselInterior .carousel-inner .one {
+  background-image: url("../img/services/interior/interior1.jpeg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselInterior .carousel-inner .two {
+  background-image: url("../img/services/interior/interior2.jpeg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselExterior .carousel-inner .one {
+  background-image: url("../img/services/exterior/exterior1.jpg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselExterior .carousel-inner .two {
+  background-image: url("../img/services/exterior/exterior2.jpeg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselCommercial .carousel-inner .one {
+  background-image: url("../img/services/commercial/commercial1.jpg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselCommercial .carousel-inner .two {
+  background-image: url("../img/services/commercial/commercial2.jpg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselMulti .carousel-inner .one {
+  background-image: url("../img/services/multi-family/multi1.jpg");
+}
+body .container .row.services .col .tab-content .tab-pane #carouselMulti .carousel-inner .two {
+  background-image: url("../img/services/multi-family/multi2.jpg");
 }
 body .container .row.licenses .license-icon {
   background-image: url("../img/icons/licese.svg");
