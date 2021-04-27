@@ -48,9 +48,16 @@ const fillFrame = (name, date, description, imageLinks) => {
 };
 
 
-document.querySelector(".img-view>.close").addEventListener("click", () => {
-    document.querySelector(".img-view").style.display = "none";
-})
+
+let selector=".img-view>.close"
+try {
+    
+    document.querySelector(selector).addEventListener("click", () => {
+        document.querySelector(".img-view").style.display = "none";
+    })
+} catch (error) {
+    console.log("No button with " + selector + " selector");
+}
 
 class Project {
     constructor(name, date, description, imageLinks) {
@@ -59,6 +66,7 @@ class Project {
             let element = document.createElement('img');
             element.setAttribute('src', link);
             element.addEventListener('click', (e) => {
+                 element.addEventListener('click', (e) => {
                 let counter = this.imgElements.indexOf(element);
                 console.log(counter);
                 console.log(e.target);
@@ -82,6 +90,8 @@ class Project {
 
                 });;
             })
+            })
+         
             return element;
         });
 
