@@ -171,7 +171,7 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
 
         galleryHTML.querySelector("#files").childElementCount;
         for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
-            await fetch(`http://192.168.0.9:5500/assets/img/gallery/project-${i}`, {
+            await fetch(linkToTheGllery + `project-${i}`, {
                 headers: {
                     "Content-Type": "text/html",
                     Accept: "text/html",
