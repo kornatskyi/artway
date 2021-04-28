@@ -145,81 +145,81 @@ let projects = [];
 
 
 
-/**
- * 
- * @param {strin} linkToTheGllery link to the directory which containes all projects directorys and will fetch data from 
- * @param {number} numberOfProjects number of projects to fetch
- * @returns data in form [name of the project(string), date of the project(string),
- *  descriotion of th project(string), link to the images(array of strings ) ]
- */
-const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProjects) {
-    let data = [];
-    await fetch(linkToTheGllery, {
-        headers: {
-            "Content-Type": "text/html",
-            Accept: "text/html",
-        },
-    }).then(response => {
+// /**
+//  * 
+//  * @param {strin} linkToTheGllery link to the directory which containes all projects directorys and will fetch data from 
+//  * @param {number} numberOfProjects number of projects to fetch
+//  * @returns data in form [name of the project(string), date of the project(string),
+//  *  descriotion of th project(string), link to the images(array of strings ) ]
+//  */
+// const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProjects) {
+//     let data = [];
+//     await fetch(linkToTheGllery, {
+//         headers: {
+//             "Content-Type": "text/html",
+//             Accept: "text/html",
+//         },
+//     }).then(response => {
 
-        if (!response.ok) {
-            throw Error(response.statusText);
-        }
-        return response.text();
-    }).then(async (galleryHTMLString) => {
-        let galleryHTML = document.createElement('div')
-        galleryHTML.innerHTML = galleryHTMLString;
+//         if (!response.ok) {
+//             throw Error(response.statusText);
+//         }
+//         return response.text();
+//     }).then(async (galleryHTMLString) => {
+//         let galleryHTML = document.createElement('div')
+//         galleryHTML.innerHTML = galleryHTMLString;
 
-        galleryHTML.querySelector("#files").childElementCount;
-        for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
-            await fetch(linkToTheGllery + `project-${i}`, {
-                headers: {
-                    "Content-Type": "text/html",
-                    Accept: "text/html",
-                },
-            })
-                .then((response) => {
+//         galleryHTML.querySelector("#files").childElementCount;
+//         for (let i = 1; i < galleryHTML.querySelector("#files").childElementCount; i++) {
+//             await fetch(linkToTheGllery + `project-${i}`, {
+//                 headers: {
+//                     "Content-Type": "text/html",
+//                     Accept: "text/html",
+//                 },
+//             })
+//                 .then((response) => {
 
 
-                    if (!response.ok) {
-                        throw Error(response.statusText);
-                    }
-                    return response.text();
-                })
-                .then(async (htmlString) => {
-                    let imagesPaths;
-                    let projectInfo;
-                    let imagesAnchorns;
-                    let infoAnchorn;
-                    //Container for HTML. By whitch you can get acces to its components
-                    htmlContainer.innerHTML = htmlString;
+//                     if (!response.ok) {
+//                         throw Error(response.statusText);
+//                     }
+//                     return response.text();
+//                 })
+//                 .then(async (htmlString) => {
+//                     let imagesPaths;
+//                     let projectInfo;
+//                     let imagesAnchorns;
+//                     let infoAnchorn;
+//                     //Container for HTML. By whitch you can get acces to its components
+//                     htmlContainer.innerHTML = htmlString;
 
-                    //Get NodeList of <a> elements that link to images in requested directory. And convert in to Array.
-                    imagesAnchorns = Array.from(
-                        htmlContainer.querySelectorAll(".icon-image")
-                    );
-                    //Get link from anchorns
-                    imagesPaths = imagesAnchorns.map((imgA) => imgA.getAttribute("href"));
-                    //Get an <a> element that links to json file with project info
-                    infoAnchorn = htmlContainer.querySelector(".icon-application-json");
+//                     //Get NodeList of <a> elements that link to images in requested directory. And convert in to Array.
+//                     imagesAnchorns = Array.from(
+//                         htmlContainer.querySelectorAll(".icon-image")
+//                     );
+//                     //Get link from anchorns
+//                     imagesPaths = imagesAnchorns.map((imgA) => imgA.getAttribute("href"));
+//                     //Get an <a> element that links to json file with project info
+//                     infoAnchorn = htmlContainer.querySelector(".icon-application-json");
 
-                    await fetch(infoAnchorn, {
-                        headers: {
-                            "Content-Type": "application/json"
-                        },
-                    })
-                        .then((response) => response.json())
-                        .then((JSONdata) => {
-                            data.push([JSONdata.name, JSONdata.date, JSONdata.description, imagesPaths]);
-                        });
-                })
-                .catch(() => {
-                    console.log("error");
-                });
-        }
-    })
+//                     await fetch(infoAnchorn, {
+//                         headers: {
+//                             "Content-Type": "application/json"
+//                         },
+//                     })
+//                         .then((response) => response.json())
+//                         .then((JSONdata) => {
+//                             data.push([JSONdata.name, JSONdata.date, JSONdata.description, imagesPaths]);
+//                         });
+//                 })
+//                 .catch(() => {
+//                     console.log("error");
+//                 });
+//         }
+//     })
 
-    return data;
-}
+//     return data;
+// }
 
 // getProjectsDataFomGallery(linkToTheGllery).then(projectsData => {
 //     projectsData.forEach(projectData => projects.push(new Project(projectData[0], projectData[1], projectData[2], projectData[3])))
