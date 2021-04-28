@@ -241,4 +241,4 @@ const projectData2 = {
     "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia"
 }
 const imageLinks2 = ["assets/img/gallery/project-2/first.jpeg", "assets/img/gallery/project-2/second-1.jpeg", "assets/img/gallery/project-2/second-2.jpeg", "assets/img/gallery/project-2/third-1.jpeg", "assets/img/gallery/project-2/third-2.jpeg", "assets/img/gallery/project-2/third-3.jpeg"]
-const projec2 = new Project(projectData1["name"], projectData1["date"], projectData1["description"],  imageLinks1 );
+const projec2 = new Project(projectData2["name"], projectData2["date"], projectData2["description"],  imageLinks2 );
