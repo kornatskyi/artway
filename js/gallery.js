@@ -11,7 +11,7 @@ let date = "";
 let description = "";
 let imageLinks = [];
 
-const linkToTheGllery = "https://kornatskyi.github.io/artway/assets/img/gallery/";
+const linkToTheGllery = "https://github.com/kornatskyi/artway/tree/production/assets/img/gallery";
 
 const fillFrame = (name, date, description, imageLinks) => {
     return `<div class="project-header">
@@ -221,6 +221,24 @@ const getProjectsDataFomGallery = async function (linkToTheGllery, numberOfProje
     return data;
 }
 
-getProjectsDataFomGallery(linkToTheGllery).then(projectsData => {
-    projectsData.forEach(projectData => projects.push(new Project(projectData[0], projectData[1], projectData[2], projectData[3])))
-})
+// getProjectsDataFomGallery(linkToTheGllery).then(projectsData => {
+//     projectsData.forEach(projectData => projects.push(new Project(projectData[0], projectData[1], projectData[2], projectData[3])))
+// })
+
+
+const projectData1 = {
+    "name": "First project",
+    "date": "20/21/2018",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia"
+}
+const imageLinks1 = ["assets/img/gallery/project-1/first.jpeg", "assets/img/gallery/project-1/second-1.jpeg", "assets/img/gallery/project-1/second-2.jpeg", "assets/img/gallery/project-1/third-1.jpg", "assets/img/gallery/project-1/third-2.jpeg", "assets/img/gallery/project-1/third-3.jpg"]
+const projec1 = new Project(projectData1["name"], projectData1["date"], projectData1["description"],  imageLinks1 );
+
+
+const projectData2 = {
+    "name": "Second project",
+    "date": "20/21/2020",
+    "description": "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia"
+}
+const imageLinks2 = ["assets/img/gallery/project-2/first.jpeg", "assets/img/gallery/project-2/second-1.jpeg", "assets/img/gallery/project-2/second-2.jpeg", "assets/img/gallery/project-2/third-1.jpeg", "assets/img/gallery/project-2/third-2.jpeg", "assets/img/gallery/project-2/third-3.jpeg"]
+const projec2 = new Project(projectData1["name"], projectData1["date"], projectData1["description"],  imageLinks1 );
