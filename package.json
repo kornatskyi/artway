@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/kornatskyi/artway/issues"
   },
-  "homepage": "https://github.com/kornatskyi/artway#readme",
+  "homepage": "https://github.com/kornatskyi/artway",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@popperjs/core": "^2.9.2",
