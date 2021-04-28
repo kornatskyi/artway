@@ -11,7 +11,7 @@ let date = "";
 let description = "";
 let imageLinks = [];
 
-const linkToTheGllery = "http://192.168.0.9:5500/assets/img/gallery";
+const linkToTheGllery = "https://kornatskyi.github.io/artway/assets/img/gallery/";
 
 const fillFrame = (name, date, description, imageLinks) => {
     return `<div class="project-header">
