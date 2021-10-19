@@ -1,6 +1,11 @@
 # artway
 Web-s ite for painting company
 
-This is a web site for a small construction company. 
-It provides detailed description of the company. 
-And gives an ability for customers to contact the company and make requests for estimate.
+![Screenshot](https://github.com/kornatskyi/artway/blob/master/readme-assets/website-screenshot.png?=raw=true)
+
+
+
+Writtne in pure JS and CSS, without using any frameworks.
+Feel free to use as a template!
+
+
