@@ -10,9 +10,11 @@ body .container > .row:not(.row-1) {
   margin-top: 40px;
 }
 body .container .row.row-1 {
-  height: 100%;
-  min-height: 750px;
+  min-height: 90vh;
   max-height: 1200px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
 }
 body .container .row.row-1 .background {
   position: absolute;
@@ -21,7 +23,7 @@ body .container .row.row-1 .background {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 750px;
+  min-height: 90vh;
   max-height: 1200px;
   width: 100%;
   z-index: -1;

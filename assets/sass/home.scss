@@ -21,9 +21,11 @@ body {
 
         //Main greeating section
         .row.row-1 {
-            height    : 100%;
-            min-height: 750px;
-            max-height: 1200px;
+            min-height        : 90vh;
+            max-height        : 1200px;
+            display           : flex;
+            /* justify-content: center; */
+            align-items       : center;
 
             .background {
                 position           : absolute;
@@ -32,7 +34,7 @@ body {
                 background-repeat  : no-repeat;
                 background-size    : cover;
                 background-position: center;
-                min-height         : 750px;
+                min-height         : 90vh;
                 max-height         : 1200px;
                 width              : 100%;
                 z-index            : -1;
@@ -98,7 +100,7 @@ body {
 
             .col {
                 .content {
-                    padding: 20px;
+                    padding         : 20px;
                     background-color: rgba($secondary, $alpha: 0.1);
 
                     border: 1px solid $secondary;
@@ -193,7 +195,7 @@ body {
                     .tab-pane {
                         // padding-top: 15px;
                         transition: opacity 0.2s linear;
-                        position: relative;
+                        position  : relative;
 
                         &.active {
                             display: flex;
@@ -202,17 +204,17 @@ body {
                         }
 
                         .description {
-                            position: absolute;
-                            right   : 20px;
-                            height: max-content;
-                            bottom: 20px;
+                            position       : absolute;
+                            right          : 20px;
+                            height         : max-content;
+                            bottom         : 20px;
                             display        : flex;
                             justify-content: center;
 
                             .description-container {
-                                position  : relative;
-                                background: rgba(4, 4, 4, 0.5);
-                                border    : 1px solid $secondary;
+                                position   : relative;
+                                background : rgba(4, 4, 4, 0.5);
+                                border     : 1px solid $secondary;
                                 margin-left: 20px;
 
                                 // margin-top: 100%;
@@ -247,10 +249,10 @@ body {
                                 height: 100%;
 
                                 &>* {
-                                    height         : 500px;
-                                    background-size: contain;
-                                    background-size: cover;
-                                    background-repeat: no-repeat;
+                                    height             : 500px;
+                                    background-size    : contain;
+                                    background-size    : cover;
+                                    background-repeat  : no-repeat;
                                     background-position: center bottom;
                                 }
                             }
@@ -332,12 +334,14 @@ body {
             .col {
                 display       : flex;
                 flex-direction: column;
+
                 .tab-content {
-                    .tab-pane{ 
+                    .tab-pane {
 
                         background-color: rgba($secondary, $alpha: 0.1);
                     }
                 }
+
                 .my-card-header {
                     display         : flex;
                     justify-content : center;
@@ -362,31 +366,32 @@ body {
                 }
 
                 .my-card-body {
-                    display         : flex;
-                    flex-direction  : column;
-                    justify-content : space-between;
-                    align-items     : center;
-                    height          : 100%;
-                    padding         : 20px;
-                    background-color: $white;
+                    display            : flex;
+                    flex-direction     : column;
+                    justify-content    : space-between;
+                    align-items        : center;
+                    height             : 100%;
+                    padding            : 20px;
+                    background-color   : $white;
                     // box-shadow      : $box-shadow;
-                    border: 1px solid $secondary;
+                    border             : 1px solid $secondary;
 
                     background-color: rgba($secondary, $alpha: 0.1);
 
-                   
+
                 }
 
                 .image-container {
                     display: flex;
-                  
+
                     img {
-                        margin: auto;
-                        width: auto;
+                        margin    : auto;
+                        width     : auto;
                         max-height: 180px;
-                        
+
                     }
                 }
+
                 .nav {
                     width           : 100%;
                     background-color: $primary;
@@ -482,20 +487,21 @@ body {
 
 
                                 }
+
                                 padding: 10px;
 
                                 .review-container {
                                     background-color: rgba($secondary, $alpha: 0.1);
-                                    padding-bottom: 5px;
-                                    margin: 10px;
-                                    display       : flex;
-                                    flex-direction: column;
-                                    width: 50%;
-                                    border        : 1px solid $secondary;
-                                   
+                                    padding-bottom  : 5px;
+                                    margin          : 10px;
+                                    display         : flex;
+                                    flex-direction  : column;
+                                    width           : 50%;
+                                    border          : 1px solid $secondary;
+
                                     @media only screen and (max-width: 830px) {
                                         width: 100%;
-                                        
+
                                     }
 
                                     .review-header {
@@ -517,7 +523,7 @@ body {
                                             .name {
                                                 font-weight: $font-weight-bold;
                                             }
-                                          
+
 
                                             .stars {
                                                 color    : $secondary;
@@ -529,6 +535,7 @@ body {
 
                                     .review-body {
                                         padding-left: 10px;
+
                                         .text {
                                             font-size: $font-size-sm;
                                         }
@@ -559,7 +566,7 @@ body {
 
         .row.map-section {
             margin-top: 40px;
-            
+
 
             .col {
                 display       : flex;
@@ -571,7 +578,7 @@ body {
                     border: 1px solid $secondary;
 
                     iframe {
-                        
+
                         width: 100%;
                     }
                 }
