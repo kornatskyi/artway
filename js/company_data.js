@@ -8,9 +8,9 @@
 
 
 
-const email = "artwayconstrucion@gmail.com";
+const email = "artwayconstrucion@email.com";
 const phone_number = "209-876-1234";
-const companyAddress = ` ArtWay Construction<br />Issaquah, WA 98027<br />U.S.A.`
+const companyAddress = ` ArtWay Construction<br />Seattle, WA<br />U.S.A.`
 
 function fillDataField(htmlComponents, data, type) {
     htmlComponents.forEach(component => {
